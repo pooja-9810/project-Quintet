@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive-Hotel</title>
+    <link rel="stylesheet" href="styles/hotelstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button>Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button>Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Alerts</button>
+            </div>
+            <!-- <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Contact us</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>About</button>
+            </div> -->
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button>Sign in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="categories__container">
+            <div class="category" id="nav_flight" onclick="headerButtonClicked(this)">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category" id="nav_hotel" onclick="headerButtonClicked(this)">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category" onclick="headerButtonClicked(this)">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+            <div class="category" onclick="headerButtonClicked(this)">
+                <p>Restaurants</p>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category" onclick="headerButtonClicked(this)">
+                <p>Car Hire</p>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <div id="banner">
+        <img id="slide" src="images/pexels-jonathan-borba-3144580.jpg" alt="">
+        <div id="slides">
+            <img src="images/pexels-kelly-l-2869215.jpg">
+            <img src="images/pexels-quark-studio-2506988.jpg">
+            <img src="images/pexels-quark-studio-2506990.jpg">
+            <img src="images/ralph-ravi-kayden-FqqiAvJejto-un.jpg">
+        </div>
+    </div>
+        <aside>
+            <h3 class="sidebarH3">Deals</h3>
+            <ul class="sidebar">
+                <li>Free cancellation</li>
+                <li>Reserve now, pay at stay</li>
+                <li>Special offers</li>
+            </ul>
+            <h3 class="sidebarH3">Popular</h3>
+            <ul class="sidebar">
+                <li>5 Stars</li>
+                <li>AC Rooms</li>
+                <li>Romantic</li>
+            </ul>
+        </aside>
+        <main>
+            <h1>Switzerland Hotels and Places to Stay</h1>
+
+            <div class="search_results">
+                <img src="images/ralph-ravi-kayden-FqqiAvJejto-un.jpg" alt="" />
+                <div class="hotel_outer">
+                    <h2 class="hotel_name">Grand Hotel</h2>
+                    <div class="hotel_inner">
+                        <div class="details_left">
+                            <h3 class="price">$1200</h3>
+                            <p>Free cancellation</p>
+                        </div>
+                        <div class="details_center">
+                            <h5 class="hotel_info">Hotel info</h5>
+                            <p class="hotel_details">111-222-333</p>
+                            <p class="hotel_details">Special offer</p>
+                        </div>
+                        <div class="details_right">
+                            <ul>
+                                <li>Free Parking</li>
+                                <li>Pool</li>
+                                <li>Restaurant</li>
+                                <li>Covid-19 safety measures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing_search_result"></div>
+
+            <div class="search_results">
+                <img src="images/markus-spiske-g5ZIXjzRGds-unspla.jpg" alt="" />
+                <div class="hotel_outer">
+                    <h2 class="hotel_name">Hotel Royal Galaxy</h2>
+                    <div class="hotel_inner">
+                        <div class="details_left">
+                            <h3 class="price">$2000</h3>
+                            <p>Free cancellation</p>
+                            <p class="reserve_details_left">Reserve now, pay at stay</p>
+                        </div>
+                        <div class="details_center">
+                            <h5 class="hotel_info">Hotel info</h5>
+                            <p class="hotel_details">000-222-999</p>
+                            <p class="hotel_details">Near Zurich Airport</p>
+                        </div>
+                        <div class="details_right">
+                            <ul>
+                                <li>Free Parking</li>
+                                <li>Free Wifi</li>
+                                <li>Covid-19 safety measures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing_search_result"></div>
+
+            <div class="search_results">
+                <img src="images/fernando-alvarez-rodriguez-M7Gdd.jpg" alt="" />
+                <div class="hotel_outer">
+                    <h2 class="hotel_name">Wonder Hill Inn</h2>
+                    <div class="hotel_inner">
+                        <div class="details_left">
+                            <h3 class="price">$1755</h3>
+                            <h4 id="deal">Best Deal</h4>
+                        </div>
+                        <div class="details_center">
+                            <h5 class="hotel_info">Hotel info</h5>
+                            <p class="hotel_details">777-444-666</p>
+                            <p class="hotel_details">Geneva, Switzerland</p>
+                        </div>
+                        <div class="details_right">
+                            <ul>
+                                <li>Sunset View</li>
+                                <li>Free Wifi</li>
+                                <li>Restaurant</li>
+                                <li>Free Parking</li>
+                                <li>Room Service</li>
+                                <li>24 Hours Pool</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing_search_result"></div>
+            <div class="spacing_search_result"></div>
+            
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+    
+            <div class="footer-section about">
+            <h1 class="logo-text"><span>Excursive</span></h1>
+            <p></p>
+    
+            <div class="contact">
+                <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+                <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+            </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
+                as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+            <div class="socials">
+                <a href="#"><i class ="fa fa-facebook"></i></a>
+                <a href="#"><i class ="fa fa-instagram"></i></a>
+                <a href="#"><i class ="fa fa-twitter"></i></a>
+                <a href="#"><i class ="fa fa-youtube"></i></a>
+            </div>
+            </div>
+            <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <br>
+            <ul>
+                <a href ="#"><li>FAQ</li></a>
+                <a href ="#"><li> Holiday Packages</li></a>
+                <a href ="#"><li>About Us</li></a>
+                <a href ="#"><li>Careers</li></a>
+                <a href ="#"><li>Trust & Safety</li></a>
+            </ul>
+            </div>  
+    
+            <div class="footer-section contact-form">
+                <h2>Terms & Policy</h2>
+                <br>
+            <ul>
+                <a href ="#"><li>Privacy Policy</li></a>
+                <a href ="#"><li> Terms Of Use</li></a>
+                <a href ="#"><li>Accessibility</li></a>
+                
+            </ul>
+            </div>
+            </div>
+        
+            <div class="footer-bottom">
+                &copy; Excursive | Designed By Quintet 
+            </div>
+       </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/hotel.js"></script>
+
+</body>
+
+</html>

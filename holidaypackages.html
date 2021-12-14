@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive</title>
+    <link rel="stylesheet" href="./styles/holidaypackages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button>Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button>Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Alerts</button>
+            </div>
+            <!-- <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Contact us</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>About</button>
+            </div> -->
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button>Sign in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="categories__container">
+            <div class="category">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+
+            <div class="category">
+                <p>Restaurants</p>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category">
+                <p>Car Hire</p>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <main>
+            <script src="./js/holiday.js"></script>
+            
+
+            <header id="hed">
+
+            <h1 class="hh">Holiday Packages</h1>
+
+            
+           
+            </header>
+
+            <aside>
+                <h3>  Additional Options </h3>
+                <P> Contact us ! <br> for any assistance. </P>
+                <img id="asideimg" src="./images2/contactusn.jpg" alt="customer service logo">
+                <br><br>
+                <p>See the locations of the <br> travel spots On our interactive maps </p>
+                <img id="asideimg"  src="./images2/locationn.jpg" alt="">
+                
+            </aside> 
+            <div id="main_content">
+                 
+             
+                <p id="para">From the Italian architecture of palm-studded Ticino to the dialects of Swiss-German and Latin-derived Romansch, Switzerland can sometimes feel like several countries in one–yet all with the slick packaging and punctuality for which it is famous.
+
+                    Explore this spectacular country with our list of the top attractions and best places to visit in Switzerland. </p>
+               
+                <div class ="rest"  >
+                    
+                    <img class="image1" src="./images/bridge-4636745_1920.jpg " id="slideshow" alt="">
+                    <h1 class="b" >Lucerne</h1>
+                    
+                    <h2 class="price">Package:650$/day</h2>
+                    <p class="par">  <br>medieval old town, covered bridges, waterfront promenades, frescoed historic buildings, and sun-splashed plazas with bubbling fountains. No wonder Lucerne (in German, Luzern) is a top spot for tourists. <br>  </p>
+                   <ul class="list">
+                   <li class="li"><i class="fa fa-car"></i> Public Transport,Cars</li> 
+                   <li class="li"><i class="fa fa-cutlery"> Olivo,Hermetage</i></li>  
+                  <li class="li"><i class="fa fa-bed"> Grand Hotel National</i></li>  
+                   </ul>
+                </div>
+                <div class ="rest"  >
+                    
+                    <img class="image1" src="./images/mountain-425134_1920.jpg " id="slideshow2" alt=""> 
+                    <h1 class="b" >Matterhorn</h1>
+                    
+                    <h2 class="price">Package:500$/day</h2>
+                    <p class="par"> <br>  The Matterhorn, Switzerland's iconic pointed peak is one of the highest mountains in the Alps. On the border with Italy, this legendary peak rises to 4,478 meters .At the foot of this mighty peak, lies the charming village of Zermatt, a top international resort with horse-drawn carriage rides, quaint chalets, and world-class restaurants and hotels  </p>
+                   <ul class="list">
+                   <li class="li"><i class="fa fa-car"></i> Ski cars,trains</li> 
+                   <li class="li"><i class="fa fa-cutlery"> Pollox</i></li>  
+                  <li class="li"><i class="fa fa-bed"> Hotel Elite</i></li>  
+                   </ul>
+                </div>
+                <div class ="rest"  >
+                    
+                    <img class="image1" src="./images/switzerland-interlaken-hoheweg.jpg " id="slideshow3" alt=""> 
+                    <h1 class="b" >Interlaken</h1>
+                    
+                    <h2 class="price">Package:599.99$/day</h2>
+                    <p class="par"> <br> Nestled between Lake Thun to the west and Lake Brienz to the east, Interlaken is one of Switzerland's most popular summer holiday resorts. In the center of town, Höhematte is a marvel of urban planning with 35 acres of open space. Hiking, climbing, abseiling, and kayaking are prime pursuits.
+
+                        More than 45 mountain railways, cable cars, chairlifts, and ski lifts transport visitors into the surrounding countryside and offer plenty of chances for sightseeing from up above.  </p>
+                   <ul class="list">
+                   <li class="li"><i class="fa fa-car"></i> railways,chairlifts</li> 
+                   <li class="li"><i class="fa fa-cutlery"> </i> The Alpines </li>  
+                  <li class="li"><i class="fa fa-bed">Hotel Interlaken </i></li>  
+                    
+                    
+                   </ul>
+                </div>
+                <div class ="rest"  >
+                    
+                    <img class="image1" src="./images/switzerland-zurich-top-attractions-bahnhofstrasse-bahnfof.jpg" id="slideshow4" alt=""> 
+                    <h1 class="b" >Zurich</h1>
+                    
+                    <h2 class="price">Package:550$/day</h2>
+                    <p class="par"> <br> Zurich is Switzerland's largest city, a major transportation hub, and a top starting point for travelers. A great place to begin a walking tour is the cobbled streets of the Old Town with its quaint shops, cafés, and galleries. Mile-long Bahnhofstrasse, one of Europe's finest shopping strands the Swiss National Museum, in a Gothic chateau, spotlights Swiss cultural history. Families will love the Zurich Zoo with an elephant park, penguin parade, and Madagascar pavilion.<br>  </p>
+                   <ul class="list">
+                   <li class="li"><i class="fa fa-car"></i> public transport, cars,buses</li> 
+                   <li class="li"><i class="fa fa-cutlery"> nakamura</i></li>  
+                  <li class="li"><i class="fa fa-bed"> Amber hotel</i></li>  
+                   </ul>
+                </div>
+                   
+               
+                    
+                   
+                </div>
+               
+
+
+
+            </div>
+
+         </div>
+            </div>
+           
+
+           
+
+
+           
+        </main>
+    </div>
+     
+    <div class="footer">
+      <div class="footer-content">
+
+        <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
+          as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+        <div class="socials">
+          <a href="#"><i class ="fa fa-facebook"></i></a>
+          <a href="#"><i class ="fa fa-instagram"></i></a>
+          <a href="#"><i class ="fa fa-twitter"></i></a>
+          <a href="#"><i class ="fa fa-youtube"></i></a>
+        </div>
+        </div>
+        <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href ="#"><li>FAQ</li></a>
+          <a href ="#"><li> Holiday Packages</li></a>
+          <a href ="#"><li>About Us</li></a>
+          <a href ="#"><li>Careers</li></a>
+          <a href ="#"><li>Trust & Safety</li></a>
+        </ul>
+      </div>  
+
+        <div class="footer-section contact-form">
+          <h2>Terms & Policy</h2>
+          <br>
+        <ul>
+          <a href ="#"><li>Privacy Policy</li></a>
+          <a href ="#"><li> Terms Of Use</li></a>
+          <a href ="#"><li>Accessibility</li></a>
+          
+        </ul>
+        </div>
+      </div>
+    
+     <div class="footer-bottom">
+       &copy; Excursive | Designed By Quintet 
+      </div>
+      </div>
+     
+    
+   
+</body>
+
+</html>

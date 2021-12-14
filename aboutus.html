@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<!-- header  -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Us</title>
+    <link href="styles/aboutusstyle.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+<!-- body -->
+</head>
+<!-- START OF JOINT NAVIGATION BAR  -->
+<body>
+  <header class="header">
+      <div class="header__left">
+          <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+          <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+      </div>
+      <div class="header__right">
+          <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+              <i class="fa fa-pencil"></i>
+              <button class="hide">Reviews</button>
+          </div>
+
+          <div class="header__rightBtn" onclick="buttonClicked()">
+              <i class="fa fa-heart"></i>
+              <button class="hide">Trips</button>
+          </div>
+          <div class="header__rightBtn" onclick="buttonClicked()">
+              <i class="fa fa-bell"></i>
+              <button class="hide">Alerts</button>
+          </div>
+          <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+              <button id="buttonSignIn">Sign Out</button>
+          </div>
+      </div>  
+  </header>
+
+
+  <div id="sidepanel" class="sidepanel">
+      <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+      <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+      <a href="#" class="font120">Alerts</a>
+      <a href="#" class="font120">Trips</a>
+      <a href="booking.html" class="font120">Bookings</a>
+      <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+      <a href="./flight.html">Flights</a>
+      <a href="#">Holiday Homes</a>
+      <a href="./hotel.html">Hotels</a>
+      <a href="./restaurant.html">Restaurants</a>
+      <a href="#">Holiday Package</a>
+      <a href="./carhire.html">Car Hire</a>
+      <a href="./placestovisit.html">Places to Visit</a>
+      <a href="./cruise.html">Cruise</a>
+      <a href="./aboutus.html">About Us</a>
+      <a href="./contact-us.html">Contact Us</a>
+  </div>
+  <div class="banner">
+      <div class="banner__backgroundColor">
+          <div class="categories__container">
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Flights</p>
+                  <i class="fa fa-plane"></i>
+              </div>
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Hotels</p>
+                  <i class="fa fa-bed"></i>
+              </div>
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Holiday Homes</p>
+                  <i class="fa fa-home"></i>
+              </div>
+
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Restaurants</p>
+                  <i class="fa fa-utensil-spoon"></i>
+                  
+              </div>
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Car Hire</p>
+                  <i class="fa fa-car"></i>
+              </div>
+              <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+                  <p>More</p>
+                  <i class="fa fa-ellipsis-h"></i>
+                  
+<!---------------------------------------Dropdown list from "More" Button-------------------------------------->
+                  <div id="moreButtonDropdown" class="dropdown-content">
+                      <a href="#">Holiday Package</a>
+                      <a href="booking.html">Bookings</a>
+                      <a href="./cruise.html">Cruise</a>
+                      <a href="./placestovisit.html">Places to Visit</a>
+                      <a href="./aboutus.html">About Us</a>
+                      <a href="./contact-us.html">Contact Us</a>
+                      <a href="./faqs.html">FAQs</a>
+                      <a href="./reviews.html">Reviews</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+    <!-- joint group navigation ends -->
+
+    <!-- About us page starts -->
+
+    <!-- banner type top message -->
+    <p class="create-space"></p>
+    <p class="mission">
+      "Our mission is to reset the industry standards. Because we believe travel
+      is a human right."
+    </p>
+
+    <!-- image wrapper containing the flex images -->
+    <div class="imgwrapper">
+      
+      <img
+        class="imaj img1"
+        src="https://i.ibb.co/sw1YDfp/pexels-pixabay-208701.jpg"
+        alt= "A Venice Canal with gondols sailing"
+        onclick=""
+      />
+      <img
+        class="imaj img2"
+        src="https://images.pexels.com/photos/9226526/pexels-photo-9226526.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        alt="Lady on a Beach"
+        
+      />
+
+      <img
+        class="imaj img3"
+        src="https://i.ibb.co/7YghGy7/pexels-rebeca-gonc-alves-1770310.jpg"
+        alt="Wine bottle with a glass of wine and some macarons"
+      />
+
+    </div>
+
+
+    <!-- hidden modal box for CEO Message, initializes upon clicking on images -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>From the CEO:</h1>
+      <div class="ceo-img-container">
+        <img class="ceo-img" src="images/victoria-ceo.jpeg">
+        <span class="ceo-message">
+          <p>Excursive aims to be one of the most important travel websites in the world. 
+          We have already managed to create a diverse customer base of nearly 30 million worldwide. 
+          Companies operating in the travel sector support the culture of innovation in many countries 
+          and contribute to the economies by helping to turn new ideas into businesses. 
+          This is best demonstrated by looking at the total contribution volume. However there are many 
+          aspects that need change in this ever-booming industry. </p>
+          <p>We take pride in our predecessors' past accomplishments, which are the best predictor of future achievements. 
+          However, our aim is to further this success so that Excursive continues to prosper for many more years to come,
+          along with our customers and key partners while upholding the key values of equality, honesty and respect.</p>
+          I would like to express my gratitude to our shareholders, business partners and all current and 
+          potential users of our platform for their confidence, as well as all our employees for their commitment 
+          and effort.
+
+          <p class="ceo-sig">Victoria Awolowo, CEO</p>
+        </span>
+      </div>
+      
+    </div>
+    <!-- overlay that blurs the page during hidden message display -->
+    <div class="overlay hidden"></div>
+    <!-- hidden box ends -->
+
+    <!-- Stories About Us -->
+    <article>
+      <div= class="stories">
+        <div class="storyleft">
+          <h2>Our Story</h2>
+          <p>
+            We are a start up company that is relatively new to the field. But
+            what we bring to the travel industry is more than cheap prices and
+            awesome bundles. Excursive was born out of the needs of travellers.
+            We strive to re-set the one size fits all industry stard in terms of
+            offers, pricing, bundling and especially support to a new approach
+            tailored to individual needs. Because we believe that travelling is
+            every human's right irrespective of their location, income, race,
+            gender and choices in a one home we call Earth.
+          </p>
+        </div>
+
+        <div class="storyright">
+          <h2>What Do We Do Different</h2>
+          <p>
+            Thanks to our home-brewed sophisticated AI software, we target every
+            single customer with a fresh approach tailored to their needs. Our
+            AI customer service representatives takes into consideration not
+            only the personal details but also the expectations of our guests to
+            offer them the best options available in their preferred times for
+            travel. We do this in order to eliminate any and all small detail
+            going unnoticed so as to maximize the guest satisfaction.
+          </p>
+        </div>
+      </div=>
+    </article>
+    <!-- Stories about us ends -->
+
+    <script src="js/aboutus.js"></script>
+  
+  </body>
+  
+
+
+  <!-- ----------------------FOOTER---------------------------------------- -->
+  <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+        as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+        vacation activities, and restaurants.
+        <div class="socials">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href="faqs.html">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li> Holiday Packages</li>
+          </a>
+          <a href="aboutus.html">
+            <li>About Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Trust & Safety</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Terms & Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+          <a href="#">
+            <li> Terms Of Use</li>
+          </a>
+          <a href="#">
+            <li>Accessibility</li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; Excursive | Designed By Quintet
+    </div>
+  </div>
+
+</html>
+
+

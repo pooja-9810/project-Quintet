@@ -1,0 +1,774 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+Main Color: #50AAAE
+Grey Color: #1f2937
+Accent Color: #f59e0b
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(80 170 174);
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  height: 3.5rem;
+  z-index: 1000;
+}
+#hamburger {
+  font-size: 220%;
+  cursor: pointer;
+  display: none;
+}
+#hamburger:hover {
+  cursor: pointer;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.header__right {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.header__right button {
+  border: none;
+  background: none;
+}
+#signin {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburgerSignIn {
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  padding: 0.5rem 2rem;
+  margin-left: 2rem;
+}
+
+.header__rightBtn {
+  padding: 10px;
+}
+
+.header__rightBtn button {
+  cursor: pointer;
+  color: white;
+  font-size: medium;
+}
+
+.header__rightBtn:hover {
+  cursor: pointer;
+  background-color: rgb(122, 136, 146);
+  border-radius: 15px;
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1001;
+}
+
+.sidepanel a {
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  text-decoration: none;
+  color: black;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.font120 {
+  font-size: 120% !important;
+  font-weight: bold;
+}
+#hamburgerClosebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 150% !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+main {
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  background: rgb(60, 60, 60);
+  margin-top: auto;
+  width: 100%;
+}
+.banner {
+  width: 100vw;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url("https://stockphoto.com/search.php?q=kids+playing+outdoors");
+  position: relative;
+}
+.banner::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Main */
+main {
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* Nav bar */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.categories__container {
+  display: flex;
+  justify-content: center;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+  margin: 1rem 0.5rem;
+  padding: 0 1rem;
+}
+
+.category i {
+  font-size: 1.4rem;
+}
+
+.category:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+/* Main Cruise Banner */
+.crheader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  justify-content: stretch;
+  align-content: stretch;
+  height: auto;
+  width: fit-content;
+  position: relative;
+}
+
+.crbackground {
+  width: 100%;
+  object-fit: scale-down;
+  grid-column: 1/ -1;
+  grid-row: 1/-1;
+  position: relative;
+}
+
+.crcountry {
+  position: absolute;
+  z-index: 1;
+  justify-self: center;
+  font-size: 42px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.crheadtext {
+  grid-column: 2 / 9;
+  grid-row: 4 / 9;
+  z-index: 1;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 1.2px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.cr--1 {
+  display: inline-block;
+  font-size: 72px;
+  color: #fff;
+  text-shadow: #fff 1px 0 10px;
+  margin: 0px;
+  animation: glow 2s infinite alternate;
+}
+
+.cr--1a {
+  color: #f59e0b;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes glow {
+  to {
+    text-shadow: 0 0 20px #f59e0b;
+  }
+}
+
+.crbook {
+  background-color: #f59e0b;
+  border: none;
+  font-size: 24px;
+  border-radius: 20px;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Cruise Booking Button */
+.crbook:link,
+.crbook:visited,
+a:link,
+a:visited {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.crbook:hover,
+.crbook:active {
+  background-color: #fbbf24;
+}
+
+.crheadfoot {
+  justify-self: center;
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.crheadfoot span {
+  font-size: 42px;
+  font-size: 3vw;
+}
+
+.crheadfoot ul {
+  display: block;
+  font-size: 18px;
+  line-height: 25px;
+  font-size: 1.5vw;
+}
+
+.crheadfoot ul li {
+  text-align: left;
+  list-style: none;
+}
+
+.crheadfoot ul li:first-child {
+  font-size: 24px;
+  font-size: 1.5vw;
+}
+
+/* Cruise Destination Boxes */
+.cruisegrid1,
+.cruisegrid2,
+.cruisegrid3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4vw;
+  margin: 4vw;
+  padding: 2vw;
+  border-radius: 30px;
+  border: 1px solid #1f2937;
+  justify-content: center;
+  align-items: center;
+}
+
+.cruisegridimg1 {
+  width: 100%;
+}
+
+.crarticle1 span,
+.crarticle2 span,
+.crarticle3 span {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.crarticle1,
+.crarticle2,
+.crarticle3 {
+  font-size: 1.1vw;
+  line-height: 1.5;
+}
+
+.crprice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crprice p {
+  font-weight: 900;
+}
+
+/* Cruise Small Booking Button */
+.book--small {
+  background-color: #f59e0b;
+  border: none;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.footer .footer-content .fa {
+  padding: 0px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 20px;
+  width: 50px;
+  color: white;
+}
+
+.footer {
+  background: rgb(63, 60, 60);
+  color: #bebdbd;
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+.footer .footer-content {
+  height: 350px;
+  display: flex;
+}
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer .footer-content h2 {
+  color: #bebdbd;
+}
+.footer .footer-content .about h1 span {
+  color: rgb(19, 129, 141);
+}
+.footer .footer-content .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+  font-size: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.footer .footer-content .links ul a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #bebdbd;
+  text-decoration: none;
+}
+.footer .footer-content .links ul a:hover {
+  color: rgb(243, 233, 233);
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s;
+}
+.footer .footer-content .contact-form ul a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #bebdbd;
+  text-decoration: none;
+}
+.footer .footer-content .contact-form ul a:hover {
+  color: rgb(243, 233, 233);
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+.footer .footer-content .contact-form .contact-btn {
+  float: right;
+}
+.btn-big {
+  padding: 10px 10px;
+  line-height: 30px;
+  background-color: rgb(19, 129, 141);
+  color: white;
+  border-radius: 3px;
+  font-size: 20px;
+}
+.text-input {
+  padding: 10px 10px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+}
+.footer .footer-bottom {
+  background: rgb(44, 43, 42);
+  color: #574c4c;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* form for displaying price information and making selection starts */
+
+.form-wrapper {
+  margin-top: 2vw;
+  border-top: 3px solid #50aaae;
+  border-bottom: 3px solid #50aaae;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(255, 248, 220, 0.404);
+}
+
+.cruise-form {
+  display: grid;
+  grid-template-columns: repeat(2, 35vw);
+  justify-content: center;
+  gap: 6rem;
+}
+
+/* .cruise-children-count,
+.cruise-adult-count {
+  width: 7rem;
+} */
+
+.form-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 17vw);
+  grid-template-rows: repeat(2, 5vw);
+  gap: 2vw;
+}
+
+.check-in,
+.check-out,
+.adult-count,
+.children-count {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookingstart,
+.bookingend,
+.booking-start-label,
+.booking-end-label,
+.adult-count-label,
+.children-count-label,
+.cruise-adult-count,
+.cruise-children-count {
+  align-self: center;
+  margin-top: 0;
+}
+
+.price-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 14rem);
+  flex-direction: row;
+  justify-items: start;
+  justify-content: space-evenly;
+}
+
+.displayPrice1,
+.displayPrice2 {
+  border: 1px #eeb4503a solid;
+  padding: 1rem;
+  width: 100%;
+}
+
+.displayPrice3,
+.displayPrice4 {
+  border: 1px #f59f0b21 solid;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px rgba(0, 0, 0, 0.295) solid;
+  margin-top: -1rem;
+  width: 100%;
+}
+
+.displayPrice5 {
+  grid-column: 1/ -1;
+  margin-top: -1rem;
+  justify-self: center;
+  border: 1px #f59f0b33 solid;
+  border-top: none;
+  padding: 1rem;
+}
+
+.form-1 {
+  line-height: 2rem;
+}
+
+.form-1title {
+  font-size: 1.2rem;
+}
+
+/* submit button starts */
+.cruise-submit {
+  background-color: #f59f0b;
+  padding: 1rem;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.cruise-submit:link,
+.cruise-submit:visited,
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cruise-submit:hover,
+.cruise-submit:active {
+  color: #f59f0b;
+  background-color: white;
+  cursor: pointer;
+  border: 2px #f59f0b solid;
+}
+/* submit button ends */
+
+/* form ends here */
+
+/* Media Query */
+@media only screen and (max-width: 658px) {
+  body {
+    min-width: auto;
+  }
+
+  .cruisegrid1,
+  .cruisegrid2,
+  .cruisegrid3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    direction: ltr;
+    gap: 4vw;
+    margin: 4vw;
+    padding: 2vw;
+    border-radius: 30px;
+    border: 1px solid #1f2937;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .crcountry {
+    font-size: 5vw;
+  }
+
+  .crheadtext {
+    font-size: 3vw;
+    grid-row: 7/12;
+    grid-column: 2/-1;
+  }
+
+  .crheadfoot {
+    display: none;
+  }
+
+  .crbook {
+    background-color: #f59e0b;
+    border: none;
+    font-size: 2vw;
+    border-radius: 20px;
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+  }
+
+  .cruisegrid1,
+  .cruisegrid2,
+  .cruisegrid3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .crarticle1 span,
+  .crarticle2 span,
+  .crarticle3 span {
+    font-size: 3vw;
+    font-weight: 600;
+  }
+
+  .crarticle1,
+  .crarticle2,
+  .crarticle3 {
+    font-size: 3vw;
+    line-height: 1.5;
+  }
+
+  .booking-layout-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-2,
+  .cruise-form {
+    display: table-cell;
+  }
+}
+
+.dropdown-content a {
+  color: #1f2937;
+}
+
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+
+  .header__rightBtn {
+    display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+
+  #moreButtonDropdown {
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .header__rightBtn .hide {
+    display: none;
+  }
+  .html {
+    width: 100%;
+  }
+
+  .categories__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .create-space {
+    height: 170px;
+  }
+}

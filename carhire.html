@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive</title>
+    <link rel="stylesheet" href="./styles/carhire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button>Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button>Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Alerts</button>
+            </div>
+            <!-- <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Contact us</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>About</button>
+            </div> -->
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button>Sign in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="categories__container">
+            <div class="category">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+
+            <div class="category">
+                <a href="restaurant.html" style="text-decoration: none;color: inherit;">Restaurants</a>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category">
+                <p>Car Hire</p>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <main>
+            <script src="./js/carhire.js"></script>
+            <header>
+
+            <h1 class="hh">Cars Hire!</h1>
+            <img src=" ../images/about.png " alt="">
+            <h2 > Book the best vehicals on Excursive.</h2>
+            
+            </header>
+
+            <aside>
+                <h3>  WELCOME TO EXCURSIVE CARS BOOKING </h3>
+                <P>  Here we help you book  your dream car for the trip ! <br>  <span> We provide 24/7 customer service as well as  app support  for all your queries and needs  car will be delivered to your  hotel or  at the airport, as you desire. </span>  </P>
+                <img id="cuslogo" src="./images/customerservicen.jpg" alt="customer service logo">
+                <br>
+                <h1>Book your car!</h1>
+                
+                <form id="f1" >
+                <fieldset id="field1">
+                <legend>User Details</legend>
+                
+                E-Mail <input type="email" id="email" name="email"/> <br>
+        
+                  Firstname <input type="text" name="fname" id="fname"/> <br>
+                    Lastname <input type="text" name="lname" id="lname" /> <br>
+                     
+              </fieldset>
+              <br>
+              <fieldset id="field1">
+                <legend>Car Details</legend>
+                
+                Select car: <br>
+                <select id="carmodel">
+                 
+                    <option value=" Volkswagen Tiguan">Tiguan</option>
+                    <option value="Mercedes SlS gt 2019">SlS gt 2019</option>
+                    <option value="Honda City Civic ">City Civic</option>
+                    <option value="Aston Martin Dbs 2020 ">Dbs 2020</option>
+                </select><br>
+                <br>
+                How do you want your car delivered? <br>
+                <select id="cardel">
+                 
+                    <option value=" Hotel">At the hotel</option>
+                    <option value="Airport">At the Airport</option>
+                   
+                </select>
+               
+                     
+              </fieldset>
+              <input type="button" id="sub" value="Book" onclick="display()"/>
+              </form>
+              <div id="displaybox">
+                   <h2 id="displayinfo"></h2> <br>
+                    <p id="displayinfo2"></p>
+            </div>
+             
+            </aside>
+            <div id="main_content">
+                <h1 id="select"> Select from our collection of Cars</h1> 
+                <p id="para">"Cars we drive say a lot about us"</p> 
+                <p> We have displayed our offerings , choose the vehicle of your liking and go on to explore what <br> your destination has to offer!</p>
+     
+               <div class="container1">
+                <div class ="cars"  >
+                    
+                    <img class="image1" src=" ../images/vendor-1.png " alt=""> 
+                    <h1 class="b" >Volkswagen</h1>
+                    <img class="image2" src="./images/suvvolks.jpg" alt="">
+                    <h2 class="price">Price:$120/Day</h2>
+                    <p class="par"> <span class="model">Tiguan Series</span>  <br><br>Expirence the confort ,with new Volkswagen suvs. <br>best for families out for a relaxing vacation <br> in the swiss country-side </p>
+
+                </div>
+
+                <div class ="cars"  >
+                    <img class="image1" src=" ../images/vendor-3.png " alt=""> 
+                    <h1 class="b" >Mercedes</h1>
+                    <img class="image2" src="./images/mercedessls.jpg" alt="">
+                    <h2 class="price">Price:$150/Day</h2>
+                    <p class="par"> <span class="model">SLS gt 2019  </span>  <br><br>Feel the thrill ,with this mercedes super-car. <br> zoom down the long roads along the alps  <br> at a breathtaking speed. </p>
+
+                </div>
+
+                <div class ="cars"  >
+                    <img class="image1" src=" ../images/honda.jpg " alt=""> 
+                    <h1 class="b" >Honda</h1>
+                    <img class="image2" src="./images/hondacar.jpg" alt="">
+                    <h2 class="price">Price:$90/Day</h2>
+                    
+                    <p class="par"> <span class="model">CITY,CIVIC </span>  <br><br> Be Economical and Efficient ,with the Honda sedans. <br> for the best experience of your swiss trip  <br> which wont break your wallet. </p>
+                </div>
+
+                <div class ="cars"  >
+                    <img class="image1" src=" ../images/amlogonew.jpg " alt=""> 
+                    <h1 class="b" >Aston Martin</h1>
+                    <img class="image2" src="./images/astonmartincar.jpg" alt="">
+                    <h2 class="price">Price:$200/Day</h2>
+                    <p class="par"> <span class="model"> DBS Series</span> <br><br> Drive in class  ,with Aston martin DBS luxuary sports cars. <br> premium cars for your luxuary needs <br> with confort and speed. </p>
+                </div>
+
+
+            </div>
+            </div>
+
+           
+
+
+           
+        </main>
+    </div>
+     
+    <div class="footer">
+      <div class="footer-content">
+
+        <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
+          as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+        <div class="socials">
+          <a href="#"><i class ="fa fa-facebook"></i></a>
+          <a href="#"><i class ="fa fa-instagram"></i></a>
+          <a href="#"><i class ="fa fa-twitter"></i></a>
+          <a href="#"><i class ="fa fa-youtube"></i></a>
+        </div>
+        </div>
+        <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href ="#"><li>FAQ</li></a>
+          <a href ="#"><li> Holiday Packages</li></a>
+          <a href ="#"><li>About Us</li></a>
+          <a href ="#"><li>Careers</li></a>
+          <a href ="#"><li>Trust & Safety</li></a>
+        </ul>
+      </div>  
+
+        <div class="footer-section contact-form">
+          <h2>Terms & Policy</h2>
+          <br>
+        <ul>
+          <a href ="#"><li>Privacy Policy</li></a>
+          <a href ="#"><li> Terms Of Use</li></a>
+          <a href ="#"><li>Accessibility</li></a>
+          
+        </ul>
+        </div>
+      </div>
+    
+     <div class="footer-bottom">
+       &copy; Excursive | Designed By Quintet 
+      </div>
+      </div>
+   
+</body>
+
+</html>

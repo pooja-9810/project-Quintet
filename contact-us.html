@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/contactusstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <meta name="description" content="This is Excursive travel official site" />
+    <meta name="keywords" content="Excursive,Travel" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Excursive - Contact Us</title>
+</head>
+
+<body>
+    <header class="header">
+        <header class="header">
+            <div class="header__left">
+                <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+                <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+            </div>
+            <div class="header__right">
+                <div class="header__rightBtn" onclick="buttonClicked()">
+                    <i class="fa fa-pencil"></i>
+                    <button class="hide">Reviews</button>
+                </div>
+
+                <div class="header__rightBtn" onclick="buttonClicked()">
+                    <i class="fa fa-heart-o"></i>
+                    <button class="hide">Trips</button>
+                </div>
+                <div class="header__rightBtn" onclick="buttonClicked()">
+                    <i class="fa fa-bell-o"></i>
+                    <button class="hide">Alerts</button>
+                </div>
+                <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                    <button id="buttonSignIn">Sign Out</button>
+                </div>
+
+
+            </div>
+
+
+        </header>
+        <div id="sidepanel" class="sidepanel">
+            <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+            <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+            <a href="#" class="font120">Alerts</a>
+            <a href="#" class="font120">Trips</a>
+            <a href="#" class="font120">Bookings</a>
+            <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+            <a href="./flight.html">Flights</a>
+            <a href="#">Holiday Homes</a>
+            <a href="#">Hotels</a>
+            <a href="#">Restaurants</a>
+            <a href="#">Holiday Package</a>
+            <a href="./carhire.html">Car Hire</a>
+            <a href="#">Places to Visit</a>
+            <a href="#">Cruise</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner__backgroundColor">
+            <div class="heading">
+                <h1>Get in touch with us</h1>
+                <p> Explore exciting things to do around the world</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-body">
+        <div class="contact-info" id="contactInfo">
+            <!-- Below code is dyanamacially generated -->
+            <!-- <div>
+                <span><i class="fas fa-mobile-alt"></i></span>
+                <span>Phone No.</span>
+                <span class="text">1-1111-11111-2</span>
+            </div>
+            <div>
+                <span><i class="fas fa-envelope-open"></i></span>
+                <span>E-mail</span>
+                <span class="text">igs@humber.com</span>
+            </div>
+            <div>
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                <span>Address</span>
+                <span class="text">59 Hayden Street, Toronto, Canada</span>
+            </div>
+            <div>
+                <span><i class="fas fa-clock"></i></span>
+                <span>Working Hours</span>
+                <span class="text">Monday - Friday (10:00 AM to 6:00 PM)</span>
+            </div> -->
+        </div>
+    </div>
+    <div class="contact-form">
+        <form id="contactForm">
+            <div>
+                <input type="text" class="form-control" placeholder="First Name" autofocus  aria-required=”true”>
+                <input type="text" class="form-control" placeholder="Last Name" autofocus  aria-required=”true”>
+            </div>
+            <div>
+                <input type="email" class="form-control" placeholder="E-mail" autofocus  aria-required=”true”>
+                <input type="text" class="form-control" placeholder="Phone" autofocus  aria-required=”true”>
+            </div>
+            <textarea rows="5" placeholder="Message" class="form-control" autofocus  aria-required=”true”></textarea>
+            <input type="submit" class="send-btn" value="Send Message">
+        </form>
+
+        <div>
+            <img src="image/contact-png.png" alt="">
+        </div>
+    </div>
+    </div>
+
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.9588574230966!2d-79.38599358450172!3d43.669825479120696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3517c0b3021f%3A0xf230b6fbcc847026!2sHumber%20International%20Graduate%20School!5e0!3m2!1sen!2sca!4v1636864758643!5m2!1sen!2sca"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <br>
+    <br>
+    <footer>
+
+        <div class="footer_container">
+            <div class="footer_content">
+
+                <div class="footer-section__about">
+                    <h1 class="logo-text"><span>Excursive</span></h1>
+                    <br />
+                    <div class="contact">
+                        <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span><br />
+                        <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+                        <p>
+                            Excursive is an online travel firm that provides a user-generated content website and mobile
+                            app,
+                            as well as a competitive purchase website. It also takes online reservations for
+                            transportation, lodging, vacation activities, and restaurants.
+                        </p>
+                    </div><br />
+                    <div class="socials">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section__links">
+                    <h2>Quick Links</h2>
+                    <br />
+                    <ul>
+                        <a href="./contact-us.html">
+                            <li>Contact Us</li>
+                        </a>
+                        <a href="#">
+                            <li>FAQ</li>
+                        </a>
+                        <a href="#">
+                            <li> Holiday Packages</li>
+                        </a>
+                        <a href="#">
+                            <li>About Us</li>
+                        </a>
+                        <a href="#">
+                            <li>Careers</li>
+                        </a>
+                        <a href="#">
+                            <li>Trust & Safety</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer-section__termsandpolicy">
+                    <h2>Terms & Policy</h2>
+                    <br />
+                    <ul>
+                        <a href="#">
+                            <li>Privacy Policy</li>
+                        </a>
+                        <a href="#">
+                            <li> Terms Of Use</li>
+                        </a>
+                        <a href="#">
+                            <li>Accessibility</li>
+                        </a>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer__logo"> &copy; Excursive | Designed By Quintet </div>
+        </div>
+
+    </footer>
+    <script src="./js/contactus.js"></script>
+</body>
+
+</html>

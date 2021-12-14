@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="images/planefavicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/reviews.css" />
+    <meta name="description" content="This is Excursive travel official site" />
+    <meta name="keywords" content="Excursive,Travel" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+ <!---------------------------------------Header Section-------------------------------------->
+<body>
+    <header class="header">
+        <div class="header__left">
+            <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+            <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+                <i class="fa fa-pencil"></i>
+                <button class="hide">Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart"></i>
+                <button class="hide">Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell"></i>
+                <button class="hide">Alerts</button>
+            </div>
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button id="buttonSignIn">Sign Out</button>
+            </div>
+        </div>  
+    </header>
+    
+ <!----------------------------------------Sidepanel from the hamburger button-------------------------------------->
+    <div id="sidepanel" class="sidepanel">
+        <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+        <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+        <a href="#" class="font120">Alerts</a>
+        <a href="#" class="font120">Trips</a>
+        <a href="#" class="font120">Bookings</a>
+        <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+        <a href="./flight.html">Flights</a>
+        <a href="./homes.html">Holiday Homes</a>
+        <a href="./hotel.html">Hotels</a>
+        <a href="./restaurant.html">Restaurants</a>
+        <a href="./holidaypackages.html">Holiday Package</a>
+        <a href="./carhire.html">Car Hire</a>
+        <a href="./placestovisit.html">Places to Visit</a>
+        <a href="./cruise.html">Cruise</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./contact-us.html">Contact Us</a>
+    </div>
+    
+ <!-----------------------------Buttons on the banner-------------------------------------->
+    <div class="banner">
+        <div class="banner__backgroundColor">
+            <div class="categories__container">
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Flights</p>
+                    <i class="fa fa-plane"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Hotels</p>
+                    <i class="fa fa-bed"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Holiday Homes</p>
+                    <i class="fa fa-home"></i>
+                </div>
+
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Restaurants</p>
+                    <i class="fa fa-utensil-spoon"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Car Hire</p>
+                    <i class="fa fa-car"></i>
+                </div>
+                
+ <!----------------------------------------Dropdown from the "More" button-------------------------------------->
+                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+                    <p>More</p>
+                    <i class="fa fa-ellipsis-h"></i>
+                    <div id="moreButtonDropdown" class="dropdown-content">
+                        <a href="./holidaypackages.html">Holiday Package</a>
+                        <a href="./booking.html">Bookings</a>
+                        <a href="./cruise.html">Cruise</a>
+                        <a href="./placestovisit.html">Places to Visit</a>
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./contact-us.html">Contact Us</a>
+                        <a href="./faqs.html">FAQs</a>
+                        <a href="./reviews.html">Reviews</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<!-----------------------------------Section to write a review-------------------------------------->
+<div class="content clearfix">
+    <div class="main-content">
+    <h1 class="recent-post-title">Review a place you've visited</h1>
+    <div class="post">
+        <img src="images/cablecar.jpg" alt="" class="post-image">
+        <div class="post-preview">
+            <!--Write a review for Matterhorn-->
+            <p class="preview-text">The Matterhorn</p>
+            <div class="stars">
+                <p1>&nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp Rate your experience.</p1>
+                <!--Assign a rating to the place-->
+                <form action="">
+                  <input class="star star-5" id="star-5" type="radio" name="sta" value="star1"/>
+                  <label class="star star-5" for="star-5"></label>
+                  <input class="star star-4" id="star-4" type="radio" name="sta" value="star1"/>
+                  <label class="star star-4" for="star-4"></label>
+                  <input class="star star-3" id="star-3" type="radio" name="sta" value="star1"/>
+                  <label class="star star-3" for="star-3"></label>
+                  <input class="star star-2" id="star-2" type="radio" name="sta" value="star1"/>
+                  <label class="star star-2" for="star-2"></label>
+                  <input class="star star-1" id="star-1" type="radio" name="sta" value="star1"/>
+                  <label class="star star-1" for="star-1"></label>
+                </form>
+              </div>
+              <p id="demo"></p>
+              <!--Textboxes for the review and title-->
+              <div id="textboxes" style="display: none">
+                <form id="form" action="/">
+                <div class="input-control">
+                    <label for="title1"><b>Title Of Your Review</b></label>
+                    <input id="title1" placeholder="Summarize your visit or highlight an interesting detail" name="title1" type="text"><br>
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="review1"><b>Your review</b></label><br>
+                    <input id="review1" placeholder="By sharing your experiences, you're helping travellers plan their dream trips. Thank you!" name="review1" type="text"><br>
+                    <div class="error"></div>
+                </div>
+
+                    <label for="psw"><b>When did you travel?</b></label>
+
+                <!--Dropdown to select the month-->
+                <select name="trip_date_month_year" id="trip_date_month_year" required>
+                    <option value="">Select one</option>
+                    <option value="12,2021">December 2021 </option>
+                    <option value="11,2021">November 2021 </option>
+                    <option value="10,2021">October 2021 </option>
+                    <option value="9,2021"> September 2021 </option>
+                    <option value="8,2021">August 2021 </option>
+                    <option value="7,2021">July 2021 </option>
+                    <option value="6,2021"> June 2021 </option>
+                    <option value="5,2021">May 2021 </option>
+                    <option value="4,2021">April 2021 </option>
+                    <option value="3,2021">March 2021 </option>
+                    <option value="2,2021">February 2021 </option>
+                    <option value="1,2021">January 2021 </option>
+                    </select>
+                    <br>
+                    <!--Terms and conditions-->
+                    <div class = "terms">
+                    <label><input type="checkbox" checked="checked" name="remember"> I certify that this review is based on my own
+                         experience and is my genuine opinion of this establishment and that I have no personal or 
+                         business relationship with this establishment, and have not been offered any incentive or 
+                         payment originating from the establishment to write this review. I understand that Tripadvisor
+                          has a zero-tolerance policy on fake reviews.
+
+                      </label>
+                      <br><br>
+                      <!--Button to submit the review-->
+                      <button type="submit" id="submit" name="sub" class="button">Submit </button>
+                    </form>
+                      </div>
+                </div>
+        </div>     
+</div>
+<!--Sidebar conatiner to show recent reviews from other clients-->
+</div>
+<div class="sidebar">
+        <div class="sidebar__container">
+                
+          
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img"></div>
+                            <img src="images/avatar1.jpg" height=30px width=30px/>
+                            </div>
+                            <!--name and username-->
+                            <div class="name-user">
+                                <strong>John Doe</strong>
+                                <span>@johndoe</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                        </div>
+                        <!--client-review-->
+                        <div class="client-comment">
+                            <p>It was easy to get there by gondola and cable cars. There was an interesting and informative movie on continuous loup that showed the native animals.</p>
+                        </div>
+                    </div>
+                    
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img"></div>
+                            <img src="images/avatar2.jpg" height=30px width=30px/>
+                            </div>
+                            <!--name and username-->
+                            <div class="name-user">
+                                <strong>Alice Stone</strong>
+                                <span>@alices451</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            
+                        </div>
+                        <!--client-review-->
+                        <div class="client-comment">
+                            <p>We went to Zermatt not only for the village, we went there to see The Matterhorn. From my point of view is one of the most beautiful moutains of the world. </p>
+                        </div>
+                    </div>
+                    
+                <div class="testimonial-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img"></div>
+                            <img src="images/avatar3.jpg" height=30px width=30px/>
+                            </div>
+                            <!--name and username-->
+                            <div class="name-user">
+                                <strong>Erica J</strong>
+                                <span>@erica_78</span>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star checked"></i>
+                            <i class="fa fa-star "></i>
+                        </div>
+                        <!--client-review-->
+                        <div class="client-comment">
+                            <p>This was far beyond what we could have imagined! The scenery was magnificent and the town was like out of a fairy tale.</p>
+                        </div>
+                    </div>                  
+                </div>             
+            </div>
+        </div>
+     </div>
+
+  
+  
+
+ <!--Footer-->
+ <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+        as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+        vacation activities, and restaurants.
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li> Holiday Packages</li>
+          </a>
+          <a href="#">
+            <li>About Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Trust & Safety</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Terms & Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+          <a href="#">
+            <li> Terms Of Use</li>
+          </a>
+          <a href="#">
+            <li>Accessibility</li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; Excursive | Designed By Quintet
+    </div>
+  </div>
+
+ <!-----------------------------Javscript for the page-------------------------------------->
+  <script src="./js/reviews.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

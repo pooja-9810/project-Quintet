@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive</title>
+    <link rel="stylesheet" href="./styles/restaurant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button>Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button>Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Alerts</button>
+            </div>
+            <!-- <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Contact us</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>About</button>
+            </div> -->
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button>Sign in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="categories__container">
+            <div class="category">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+
+            <div class="category">
+                <p>Restaurants</p>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category">
+                <a href="carhire.html" style="text-decoration: none;color: inherit;" > Car Hire</a>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <main>
+
+            <header id="hed">
+
+            <h1 class="hh">Restaurants.</h1>
+
+            <h2 id="se" > Taste the finest cusine on Excursive.</h2>
+           
+            </header>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script type="text/javascript" src="./js/restaurant.js"></script>
+            <aside>
+                <h3>  Hungry?? </h3>
+                <P>  You dont have to wait, order your food online! <br> </P>
+                <img id="asideimg" src="./images2/orderfood.png" alt="customer service logo">
+                <br><br><br>
+                <p>See the locations of the <br> Restaurants On our interactive maps </p>
+                <img id="asideimg"  src="./images2/locationn.jpg" alt="">
+                <p>Contact the Restaurants for any questions.</p>
+                <img id="asideimg" src="./images2/contactusn.jpg" alt="">
+
+                <div id="display">
+                    <h1>Reservations</h1>
+                    <h3 id="hh2"></h3> <br>
+                    <p id="pp2"></p>
+                    Number of diners <input type="text" id="no_din" /> <br>
+                    Time: <br> <input type="time" id="res_time"/>
+                   
+                    <br> <button id="comfirm_btn">Confirm</button> <br>
+                    <br> <h2 id="confirmmessage"></h2>
+
+
+
+                </div>
+            </aside>
+            <div id="main_content">
+                <h1 id="select"> Find  the perfect place <br> for your Palate!</h1> 
+                <p id="para"> The Best way to know a place , is to eat its food.</p> 
+                <p>Check from our collection of hand selected places and spots that will satisfy your cravings <br> The Best swiss Restaurants awaits you. </p>
+               <div class="container1">
+                <div class ="rest"  >
+                    
+                    <img class="image1" src="./images2/japan.jpg " alt=""> 
+                    <h1 class="b" >Nakamura palace</h1>
+                    <img class="image2" src="./images2/food.jpg" alt="">
+                    <h2 class="price">Price:$$</h2>
+                    <p class="par"> <span class="model">Japanese cusine</span>  <br>Warm, intimate eatery serving Japanese fare such as sushi, sashimi & omakase in wood-clad surrounds. <br>  </p>
+                    
+                    <button id="btn1">Book</button>
+                    <p id="parabt1"></p>
+                </div>
+
+                <div class ="rest"  >
+                    <img class="image1" src="./images2/dinner.jpg " alt=""> 
+                    <h1 class="b" >Hoftgarten dinner</h1>
+                    <img class="image2" src="./images2/waffles.jpg" alt="">
+                    <h2 class="price">Price:$</h2>
+                    <p class="par"> <span class="model"> French cusine</span> <br>Hofgarten is a  welcoming establishment housed in a old manor house. From  outside, it looks like a casual pub, but the minute you enter, you sense the elegance housed inside. <br>  </p>
+                    <button id="btn2">Book</button>
+                    <p id="parabt2"></p>
+                </div>
+
+                <div class ="rest"  >
+                    <img class="image1" src="./images2/table.jpg" alt=""> 
+                    <h1 class="b" >Cheval Blanc</h1>
+                    <img class="image2" src="./images2/food2.jpg" alt="">
+                    <h2 class="price">Price:$$$</h2>
+                    <p class="par"> <span class="model">Asian,Mediterian,French cusine</span>   <br> Cheval Blanc with a symphony of aromas, colors and delicately balanced flavors; artfully prepared from the best that nature has to offer us.   <br> </p>
+                    <button id="btn3">Book</button>
+                    <p id="parabt3"></p>
+                </div>
+
+                <div class ="rest"  >
+                    <img class="image1" src="./images2/balcony.jpg " alt=""> 
+                    <h1 class="b" >Remezzo</h1>
+                    <img class="image2" src="./images2/food.jpg" alt="">
+                    <h2 class="price">Price:$</h2>
+                    <p class="par"> <span class="model">Italian cusine </span> <br>Contemporary décor is combined with a typically Italian atmosphere where life is enjoyable, Remezzo is the ideal place to share timeless moments. <br>  </p>
+                    <button id="btn4">Book</button>
+                    <p id="parabt4"></p>
+                </div>
+                <div class ="endbanner"  >
+                    <img class="imageend" src="./images2/bonappetit.jpg" alt=""> 
+                    
+                   
+                </div>
+
+            </div>
+            </div>
+
+           
+
+
+           
+        </main>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+  
+          <div class="footer-section about">
+          <h1 class="logo-text"><span>Excursive</span></h1>
+          <p></p>
+  
+          <div class="contact">
+            <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+            <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+          </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
+            as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+          <div class="socials">
+            <a href="#"><i class ="fa fa-facebook"></i></a>
+            <a href="#"><i class ="fa fa-instagram"></i></a>
+            <a href="#"><i class ="fa fa-twitter"></i></a>
+            <a href="#"><i class ="fa fa-youtube"></i></a>
+          </div>
+          </div>
+          <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <br>
+          <ul>
+            <a href ="#"><li>FAQ</li></a>
+            <a href ="#"><li> Holiday Packages</li></a>
+            <a href ="#"><li>About Us</li></a>
+            <a href ="#"><li>Careers</li></a>
+            <a href ="#"><li>Trust & Safety</li></a>
+          </ul>
+        </div>  
+  
+          <div class="footer-section contact-form">
+            <h2>Terms & Policy</h2>
+            <br>
+          <ul>
+            <a href ="#"><li>Privacy Policy</li></a>
+            <a href ="#"><li> Terms Of Use</li></a>
+            <a href ="#"><li>Accessibility</li></a>
+            
+          </ul>
+          </div>
+        </div>
+      
+       <div class="footer-bottom">
+         &copy; Excursive | Designed By Quintet 
+        </div>
+        </div>
+   
+</body>
+
+</html>

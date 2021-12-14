@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/loginstyle.css">
+    <meta name="description" content="This is Excursive travel official site" />
+    <meta name="keywords" content="Excursive,Travel" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Excursive - Login</title>
+</head>
+<body>
+    <div class="container" >
+        <form id="login__form" class="login__form login__form__hidden">
+            <h1 class="login__form__title">Login</h1>
+            <div class="login__form__message login__form__message__error" >   </div>
+
+            <div class="login__form__input__group">
+                <input id="user" type="text" class = "login__form__input" autofocus placeholder="Username or email"  aria-required=”true”>
+                <div class="login__form__input__error" class = "login__form__input__message__error"></div>
+            </div>
+
+            <div  class="login__form__input__group">
+                <input id="pwd" type="password" class = "login__form__input" autofocus placeholder="Password"  aria-required=”true”>
+                <div class="login__form__input__error"></div>
+            </div>
+
+            <button type="submit" class="login_form__button">Continue</button>
+            
+            <p class="login__form__text">
+                <a href="#" class="login__form__link">Forgot your password?</a>
+            </p>
+
+            <p class="login__form__text">
+                <a href="./" class="login__form__link" id="linkLogin">Don't have an account? Create account</a>
+            </p>
+
+        </form>
+        <form id="create__account__form" class="create__account__form">
+            <h1 class="login__form__title">Create Account</h1>
+            <div class="login__form__message login__form__message__error" >   </div>
+
+            <div class="login__form__input__group">
+                <input type="text" id="ca_usr" class = "login__form__input" autofocus placeholder="Username or email"   aria-required=”true”>
+                <div class="login__form__input__error" class = "login__form__input__message__error"></div>
+            </div>
+
+            <div  class="login__form__input__group">
+                <input id="ca_pwd" type="password" class = "login__form__input" autofocus placeholder="Password"  aria-required=”true”>
+                <div class="login__form__input__error"></div>
+            </div>
+
+            <div  class="login__form__input__group">
+                <input id="ca_confirm_pwd" type="password" class = "login__form__input" autofocus placeholder="Confirm password"  aria-required=”true”>
+                <div class="login__form__input__error"></div>
+            </div>
+
+            <button type="submit" class="login_form__button">Continue</button>
+
+            <p class="login__form__text">
+                <a href="./" class="login__form__link" id="linkCreateAccount">Already have an account? Sign in</a>
+            </p>
+
+        </form>
+    </div>
+
+    <script src="./js/login.js" ></script>
+</body>
+</html>

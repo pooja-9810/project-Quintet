@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places To Visit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="images/planefavicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/placestovisit.css" />
+  <meta name="description" content="This is Excursive travel official site" />
+  <meta name="keywords" content="Excursive,Travel" />
+  <link rel="shortcut icon" href="images/planefavicon.ico">
+</head>
+
+<body>
+  <!----------------------------------------Header Section-------------------------------------->
+  <header class="header">
+    <div class="header__left">
+      <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+      <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+    </div>
+    <div class="header__right">
+      <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+        <i class="fa fa-pencil"></i>
+        <button class="hide">Reviews</button>
+      </div>
+
+      <div class="header__rightBtn" onclick="buttonClicked()">
+        <i class="fa fa-heart"></i>
+        <button class="hide">Trips</button>
+      </div>
+      <div class="header__rightBtn" onclick="buttonClicked()">
+        <i class="fa fa-bell"></i>
+        <button class="hide">Alerts</button>
+      </div>
+      <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+        <button id="buttonSignIn">Sign Out</button>
+      </div>
+    </div>
+  </header>
+   <!----------------------------------------Contents of sidepanel-------------------------------------->
+  <div id="sidepanel" class="sidepanel">
+    <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+    <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+    <a href="#" class="font120">Alerts</a>
+    <a href="#" class="font120">Trips</a>
+    <a href="#" class="font120">Bookings</a>
+    <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+    <a href="./flight.html">Flights</a>
+    <a href="./homes.html">Holiday Homes</a>
+    <a href="./hotel.html">Hotels</a>
+    <a href="./restaurant.html">Restaurants</a>
+    <a href="./holidaypackages.html">Holiday Package</a>
+    <a href="./carhire.html">Car Hire</a>
+    <a href="./placestovisit.html">Places To Visit</a>
+    <a href="./cruise.html">Cruise</a>
+    <a href="./aboutus.html">About Us</a>
+    <a href="./contact-us.html">Contact Us</a>
+  </div>
+   <!---------------------------------------Buttons on the banner-------------------------------------->
+  <div class="banner">
+    <div class="banner__backgroundColor">
+      <div class="categories__container">
+        <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+          <p>Flights</p>
+          <i class="fa fa-plane"></i>
+        </div>
+        <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+          <p>Hotels</p>
+          <i class="fa fa-bed"></i>
+        </div>
+        <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+          <p>Holiday Homes</p>
+          <i class="fa fa-home"></i>
+        </div>
+
+        <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+          <p>Restaurants</p>
+          <i class="fa fa-utensil-spoon"></i>
+        </div>
+        <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+          <p>Car Hire</p>
+          <i class="fa fa-car"></i>
+        </div>
+        <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+          <p>More</p>
+          <i class="fa fa-ellipsis-h"></i>
+           <!-----------------------------Dropdown of the "More"Button-------------------------------------->
+          <div id="moreButtonDropdown" class="dropdown-content">
+            <a href="./holidaypackages.html">Holiday Package</a>
+            <a href="./booking.html">Bookings</a>
+            <a href="./cruise.html">Cruise</a>
+            <a href="./placestovisit.html">Places to Visit</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href="./contact-us.html">Contact Us</a>
+            <a href="./faqs.html">FAQs</a>
+            <a href="./reviews.html">Reviews</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------------------------------Heading------------------------------------------------------------>
+  <div class="exploring">
+    <span class="explore">Explore</span>
+    <span class="country">Switzerland</span>
+  </div>
+   <!----------------------------------------Slider Images-------------------------------------->
+  <div class="img-slider">
+    <div class="slide active">
+      <img src="images/lucerne.jfif" alt="">
+      <div class="info">
+        <h2>Lucerne</h2>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/Oeschenin.jfif" alt="">
+      <div class="info">
+        <h2>Oeschenin</h2>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/cablecar.jpg" alt="">
+      <div class="info">
+        <h2>The Matterhorn</h2>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/lotschental.jfif" alt="">
+      <div class="info">
+        <h2>Lotschental</h2>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/zurich.jpg" alt="">
+      <div class="info">
+        <h2>Zurich</h2>
+      </div>
+    </div>
+     <!----------------------------------------Navigation buttons on slider-------------------------------------->
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+ <!----------------------------------------Script for the slider-------------------------------------->
+      <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function (manual) {
+          slides.forEach((slide) => {
+            slide.classList.remove('active');
+
+            btns.forEach((btn) => {
+              btn.classList.remove('active');
+            });
+          });
+
+          slides[manual].classList.add('active');
+          btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function (activeClass) {
+          let active = document.getElementsByClassName('active');
+          let i = 1;
+
+          var repeater = () => {
+            setTimeout(function () {
+              [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+              });
+
+              slides[i].classList.add('active');
+              btns[i].classList.add('active');
+              i++;
+
+              if (slides.length == i) {
+                i = 0;
+              }
+              if (i >= slides.length) {
+                return;
+              }
+              repeater();
+            }, 10000);
+          }
+          repeater();
+        }
+        repeat();
+      </script>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!------------------------------------------------Carousel------------------------------------------------------------>
+  <h1>Destinations</h1>
+
+  <div class="container1">
+    <div class="slider">
+      <div class="image">
+        <img src="images/Oeschenin.jfif">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">Oeschenin</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/zurich.jpg">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">&nbsp; &nbsp; Zurich</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/cablecar.jpg">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#"> The Matterhorn</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/lucerne.jfif">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">Lucerne</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/alps-switzerland.jpg">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">Alps</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/lotschental.jfif">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">Lotschental</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/img_5terre.jpg">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">Thun City Lake</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="image">
+        <img src="images/highland.jpg">
+      </div>
+      <div class="product-details">
+        <div class="product-name">
+          <a href="#">Bernese Highlands</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <i class="fas fa-chevron-right arrow"></i>
+  </div>
+   <!----------------------------------------Script for the carousel-------------------------------------->
+  <script type="text/javascript">
+    const arrows = document.querySelectorAll(".arrow");
+    const container = document.querySelectorAll(".container1");
+
+    arrows.forEach((arrow, i) => {
+      const ItemNo = container[i].querySelectorAll("img").length;
+      let clickitem = 0;
+      arrow.addEventListener("click", () => {
+        clickitem++;
+        if (ItemNo - (5 + clickitem) >= 0) {
+          container[i].style.transform = `translateX(${container[i].computedStyleMap().get("transform")[0].x.value
+            - 455}px)`;
+        } else {
+          container[i].style.transform = "translateX(0)";
+          clickitem = 0;
+        }
+      });
+    });
+
+  </script>
+  </div>
+   <!----------------------------------------Introduction-------------------------------------->
+  <div class="introheader">
+    <h1>Jaw-dropping vistas and artsy-cool cities—it’s hard to feel neutral about Switzerland</h1>
+
+  </div>
+
+  <div class="intro">
+
+    Tiny, multilingual Switzerland packs a lot into its landlocked borders: glittering lakes, sky-high peaks,
+    postcard-perfect villages, world-class museums. Get a taste of it all with the Grand Tour, a 1,000-mile route
+    that takes you to the medieval old city of Bern, towering Jungfraujoch, the iconic Matterhorn, and 42 other
+    must-sees. Or choose your own fondue-fuelled adventure: Ski bunnies and adrenaline junkies can hit the slopes
+    at Graubünden or Verbier; urban explorers can sample Zurich’s burgeoning food scene or take in art at Basel’s
+    Kunstmuseum.Or just sit back, relax, and breathe in the fresh alpine air at one of Switzerland’s luxurious spa
+    resorts.
+  </div>
+
+
+  <h1>Essential Switzerland</h1>
+  <div class="btn_container">
+     <!----------------------------------------Buttons for the essentials section navigation-------------------------------------->
+    <div class="menuitem" onclick="buttonClicked()">
+      <button><a href="#stay_header1">Stay</a></button>
+      <div class="menuitem" onclick="buttonClicked()">
+        <button><a href="#stay_header2">Eat </a></button>
+        <div class="menuitem" onclick="buttonClicked()">
+          <button><a href="#stay_header3"> Visit </a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container_essential">
+ <!----------------------------------------Section: Stay-------------------------------------->
+    <div>
+      <div class="stay">
+        <div id="stay_header1">
+          <h2>Stay</h2>
+          <h3>A mix of the charming, modern, and tried and true.</h3>
+        </div>
+      </div>
+      <div class="stay_container">
+        <div class="stay_tab">
+          <img src="images/omnia.jpg" alt="Lucerne">
+          <div class="stay_info">
+            <p>The Omnia
+            <div class="loc">Zermatt, Switzerland</div>
+            </p>
+            <div class="reviews">
+              <div>
+                <span class="fa fa-star checked">
+                  <span class="fa fa-star checked">
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star gray">
+                        <span class="fa fa-star gray">
+              </div>
+              <p> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 25 reviews</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="stay_tab">
+          <img src="images/caffe-dell-arte-boutique.jpg" alt="Locarno">
+          <div class="stay_info">
+            <p>Art Hotel Riposo
+            <div class="loc">Locarno, Switzerland</div>
+            </p>
+            <div class="reviews">
+              <div>
+                <span class="fa fa-star checked">
+                  <span class="fa fa-star checked">
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star gray">
+                        <span class="fa fa-star gray">
+              </div>
+              <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;10 reviews</p>
+            </div>
+
+          </div>
+
+
+        </div>
+        <div class="stay_tab">
+          <img src="images/aussenansicht.jpg" alt="Aussenansicht">
+          <div class="stay_info">
+            <p>Hotel Gletschergarten
+            <div class="loc">Grindelwald, Switzerland</div>
+            </p>
+
+            <div class="reviews">
+              <div>
+                <span class="fa fa-star checked">
+                  <span class="fa fa-star checked">
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked"></span>
+              </div>
+              <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;17 reviews</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+ <!----------------------------------------Section: Eat-------------------------------------->
+    <div class="container_essential">
+
+      <div>
+        <div class="stay">
+          <div id="stay_header2">
+            <h2>Eat</h2>
+            <h3>Can't-miss spots to dine, drink, and feast.</h3>
+          </div>
+        </div>
+        <div class="stay_container">
+          <div class="stay_tab">
+            <img src="images/vrony.jpg" alt="Restaurant Chez Vrony">
+            <div class="stay_info">
+              <p>Restaurant Chez Vrony
+              <div class="loc">Zermatt, Switzerland</div>
+              </p>
+              <div class="reviews">
+                <div>
+                  <span class="fa fa-star checked">
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                          <span class="fa fa-star gray">
+                </div>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;9 reviews</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="stay_tab">
+            <img src="images/taverne-johann.jpg" alt="taverne-johann">
+            <div class="stay_info">
+              <p>Taverne Johann
+              <div class="loc">Basel, Switzerland</div>
+              </p>
+              <div class="reviews">
+                <div>
+                  <span class="fa fa-star checked">
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                          <span class="fa fa-star gray">
+                </div>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;8 reviews</p>
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="stay_tab">
+            <img src="images/belvedere.jpg" alt="Belvedere">
+            <div class="stay_info">
+              <p>Restaurant Belvedere
+              <div class="loc">Grindelwald, Switzerland</div>
+              </p>
+              <div class="reviews">
+                <div>
+                  <span class="fa fa-star checked">
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                          <span class="fa fa-star checked"></span>
+                </div>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;16 reviews</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+ <!----------------------------------------Section: Visit-------------------------------------->
+      <div class="container_essential">
+
+        <div>
+          <div class="stay">
+            <div id="stay_header3">
+              <h2>Visit</h2>
+              <h3>Places to see, ways to wander, and signature experiences.</h3>
+            </div>
+          </div>
+          <div class="stay_container">
+            <div class="stay_tab">
+              <img src="images/diavolezza.jpg" alt="Diavolezza">
+              <div class="stay_info">
+                <p>Diavolezza
+                <div class="loc">Pontresina, Switzerland</div>
+                </p>
+                <div class="reviews">
+                  <div>
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                          <span class="fa fa-star checked">
+                            <span class="fa fa-star gray">
+                  </div>
+                  <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;6 reviews</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="stay_tab">
+              <img src="images/lakezurich.jpg" alt="Lucerne">
+              <div class="stay_info">
+                <p>Lake Zurich
+                <div class="loc">Zurich, Switzerland</div>
+                </p>
+                <div class="reviews">
+                  <div>
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                          <span class="fa fa-star gray">
+                            <span class="fa fa-star gray">
+                  </div>
+                  <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;11 reviews</p>
+                </div>
+
+              </div>
+
+
+            </div>
+            <div class="stay_tab">
+              <img src="images/kunstmuseum.jpg" alt="Thun City">
+              <div class="stay_info">
+                <p>Fine Arts Museum - Kunstmuseum
+                <div class="loc">Basel, Switzerland</div>
+                </p>
+                <div class="reviews">
+                  <div>
+                    <span class="fa fa-star checked">
+                      <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                          <span class="fa fa-star checked">
+                            <span class="fa fa-star checked"></span>
+                  </div>
+                  <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;23 reviews</p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------------------------------------------Footer-->
+        <div class="footer">
+          <div class="footer-content">
+
+            <div class="footer-section about">
+              <h1 class="logo-text"><span>Excursive</span></h1>
+              <p></p>
+
+              <div class="contact">
+                <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+                <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+              </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+              as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+              vacation activities, and restaurants.
+              <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="footer-section links">
+              <h2>Quick Links</h2>
+              <br>
+              <ul>
+                <a href="#">
+                  <li>FAQ</li>
+                </a>
+                <a href="#">
+                  <li> Holiday Packages</li>
+                </a>
+                <a href="#">
+                  <li>About Us</li>
+                </a>
+                <a href="#">
+                  <li>Careers</li>
+                </a>
+                <a href="#">
+                  <li>Trust & Safety</li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="footer-section contact-form">
+              <h2>Terms & Policy</h2>
+              <br>
+              <ul>
+                <a href="#">
+                  <li>Privacy Policy</li>
+                </a>
+                <a href="#">
+                  <li> Terms Of Use</li>
+                </a>
+                <a href="#">
+                  <li>Accessibility</li>
+                </a>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            &copy; Excursive | Designed By Quintet
+          </div>
+        </div>
+
+ <!------------------Javscript for the page------------------------------------->
+        <script src="./js/placestovisit.js"></script>
+
+</body>
+
+</html>

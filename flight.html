@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive-Flight</title>
+    <link rel="stylesheet" href="styles/flightstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button>Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button>Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Alerts</button>
+            </div>
+            <!-- <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Contact us</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>About</button>
+            </div> -->
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button>Sign in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="categories__container">
+            <div class="category" id="nav_flight" onclick="headerButtonClicked(this)">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category" id="nav_hotel" onclick="headerButtonClicked(this)">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category" id="nav_holiday_homes" onclick="headerButtonClicked(this)">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+            <div class="category" id="nav_restaurants" onclick="headerButtonClicked(this)">
+                <p>Restaurants</p>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category" id="nav_car_hire" onclick="headerButtonClicked(this)">
+                <p>Car Hire</p>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category" id="nav_more">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <aside>
+            <div id="sidebar">
+                <div id="stop">
+                    <h4 class="sidebarh3">Stops</h4>
+                    <input type="radio" class="stops" name="stops" value="0" onclick="addStopFilter(0)"/>Nonstop <br/>
+                    <input type="radio" class="stops" name="stops" value="1" onclick="addStopFilter(1)"/>1 Stop <br/>
+                    <input type="radio" class="stops" name="stops" value="2" onclick="addStopFilter(2)"/>2+ Stops<br/>
+                </div>
+                <div id="airline">
+                    <h4 class="sidebarh3">Airlines</h4>
+                    <input type="checkbox" class="airlines" name="airlines" value="airfrance"/>Air France <br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="etihad"/>Etihad <br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Emirates<br/>
+                </div>
+                <div id="flightquality">
+                    <h4 class="sidebarh3">Flight Quality</h4>
+                    <input type="checkbox" class="quality" name="quality" value="airlinesmanaged"/>Exclude Self-Transfers <br/>
+                    <input type="checkbox" class="quality" name="quality" value="daytime"/>Exclude Overnight Flights <br/>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <h2>Flight result for Toronto to Switzerland</h2>
+            <div id="results">
+
+                <div class="search_results">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <div id="journey">
+                        <p class="timing">02:50 am - 12:15 pm</p>
+                        <p class="location">YYZ-ZRH, Etihad</p>
+                    </div>
+                    <div id="duration">
+                        <p class="timing">13h 55m</p>
+                        <p class="stopsP">1 stop, AUH</p>
+                    </div>
+                    <div id="price">
+                        <h2 id="pricetext">CA$900</h2>
+                        <p class="deals">4 deals</p>
+                        <input type="button" value="View Deals">
+                    </div>
+                    <div class="spacing_search_result"></div>
+                </div>
+
+                <div class="search_results">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <div id="journey">
+                        <p class="timing">05:40 pm - 09:35 am</p>
+                        <p class="location">YYZ-ZRH, Aer Lingus</p>
+                    </div>
+                    <div id="duration">
+                        <p class="timing">9h 55m</p>
+                        <p class="stopsP">1 stop, DUB</p>
+                    </div>
+                    <div id="price">
+                        <h2 id="pricetext">CA$489</h2>
+                        <p class="deals">14 deals</p>
+                        <input type="button" value="View Deals">
+                    </div>
+                    <div class="spacing_search_result"></div>
+                </div>
+
+                <div class="search_results">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <div id="journey">
+                        <p class="timing">08:20 pm - 01:55 pm</p>
+                        <p class="location">YYZ - ZRH, Multiple Airlines</p>
+                    </div>
+                    <div id="duration">
+                        <p class="timing">11h 35m</p>
+                        <p class="stopsP" value="1">1 stop, FRA</p>
+                    </div>
+                    <div id="price">
+                        <h2 id="pricetext">CA$515</h2>
+                        <p class="deals">11 deals</p>
+                        <input type="button" value="View Deals">
+                    </div>
+                    <div class="spacing_search_result"></div>
+                </div>
+
+                <div class="search_results">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <div id="journey">
+                        <p class="timing">09:00 pm - 10:25 am</p>
+                        <p class="location">YYZ - ZRH, Air Canada</p>
+                    </div>
+                    <div id="duration">
+                        <p class="timing">07h 25m</p>
+                        <p class="stopsP">0 stops</p>
+                    </div>
+                    <div id="price">
+                        <h2 id="pricetext">CA$888</h2>
+                        <p class="deals">5 deals</p>
+                        <input type="button" value="View Deals">
+                    </div>
+                    <div class="spacing_search_result"></div>
+                </div>
+
+                <div class="search_results">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <div id="journey">
+                        <p class="timing">09:00 pm - 10:25 am</p>
+                        <p class="location">YYZ - ZRH, SWISS</p>
+                    </div>
+                    <div id="duration">
+                        <p class="timing">07h 25m</p>
+                        <p class="stopsP">0 stops</p>
+                    </div>
+                    <div id="price">
+                        <h2 id="pricetext">CA$889</h2>
+                        <p class="deals">13 deals</p>
+                        <input type="button" value="View Deals">
+                    </div>
+                    <div class="spacing_search_result"></div>
+                </div>
+
+                <div class="search_results">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                    <div id="journey">
+                        <p class="timing">10:45 pm - 05:10 pm</p>
+                        <p class="location">YYZ - ZRH, TAP Portugal</p>
+                    </div>
+                    <div id="duration">
+                        <p class="timing">12h 25m</p>
+                        <p class="stopsP">1 stop, LIS</p>
+                    </div>
+                    <div id="price">
+                        <h2 id="pricetext">CA$759</h2>
+                        <p class="deals">13 deals</p>
+                        <input type="button" value="View Deals">
+                    </div>
+                    <div class="spacing_search_result"></div>
+                </div>
+                <div class="spacing_search_result"></div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+    
+            <div class="footer-section about">
+            <h1 class="logo-text"><span>Excursive</span></h1>
+            <p></p>
+    
+            <div class="contact">
+                <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+                <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+            </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
+                as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+            <div class="socials">
+                <a href="#"><i class ="fa fa-facebook"></i></a>
+                <a href="#"><i class ="fa fa-instagram"></i></a>
+                <a href="#"><i class ="fa fa-twitter"></i></a>
+                <a href="#"><i class ="fa fa-youtube"></i></a>
+            </div>
+            </div>
+            <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <br>
+            <ul>
+                <a href ="#"><li>FAQ</li></a>
+                <a href ="#"><li> Holiday Packages</li></a>
+                <a href ="#"><li>About Us</li></a>
+                <a href ="#"><li>Careers</li></a>
+                <a href ="#"><li>Trust & Safety</li></a>
+            </ul>
+            </div>  
+    
+            <div class="footer-section contact-form">
+                <h2>Terms & Policy</h2>
+                <br>
+            <ul>
+                <a href ="#"><li>Privacy Policy</li></a>
+                <a href ="#"><li> Terms Of Use</li></a>
+                <a href ="#"><li>Accessibility</li></a>
+                
+            </ul>
+            </div>
+            </div>
+        
+            <div class="footer-bottom">
+                &copy; Excursive | Designed By Quintet 
+            </div>
+       </div>
+    </footer>
+
+    <script src="js/flight.js"></script>
+</body>
+
+</html>

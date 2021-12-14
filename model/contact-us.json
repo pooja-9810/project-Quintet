@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "iconValue": "1-1111-11111-2",
+      "iconClass": "fas fa-mobile-alt",
+      "iconText": "Phone No."
+    },
+    {
+      "iconValue": "igs@humber.com",
+      "iconClass": "fas fa-envelope-open",
+      "iconText": "E-mail"
+    },
+    {
+      "iconValue": "59 Hayden Street, Toronto, Canada",
+      "iconClass": "fas fa-map-marker-alt",
+      "iconText": "Address"
+    },
+    {
+      "iconValue": "Monday - Friday (10:00 AM to 6:00 PM)",
+      "iconClass": "fas fa-clock",
+      "iconText": "Working Hours"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{ "homes":[
+		{
+			"name": "EMA House Serviced Apartment",
+			"bedrooms": 1,
+			"bathrooms": 1,
+			"guests": 3,
+			"image": "images/markus-spiske-g5ZIXjzRGds-unspla.jpg"
+		},
+		
+		{
+			"name": "Jacuzzi-Penthouse Münsterhof",
+			"bedrooms": 2,
+			"bathrooms": 2,
+			"guests": 8,
+			"image": "images/home1.jpg"
+		},
+		
+		{
+			"name": "High Class Houses",
+			"bathrooms": 1,
+			"guests": 3,
+			"poolPrivate": true,
+			"image": "images/home2.jpg"
+		}
+	]
+}

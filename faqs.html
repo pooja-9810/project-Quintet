@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="images/planefavicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./styles/faqs.css" />
+    <meta name="description" content="This is Excursive travel official site" />
+    <meta name="keywords" content="Excursive,Travel" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+ <!--------------------------------Header Section------------------------------------->
+<body>
+    <header class="header">
+        <div class="header__left">
+            <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+            <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+                <i class="fa fa-pencil"></i>
+                <button class="hide">Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart"></i>
+                <button class="hide">Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell"></i>
+                <button class="hide">Alerts</button>
+            </div>
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button id="buttonSignIn">Sign Out</button>
+            </div>
+        </div>  
+    </header>
+
+
+    <div id="sidepanel" class="sidepanel">
+        <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+        <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+        <a href="#" class="font120">Alerts</a>
+        <a href="#" class="font120">Trips</a>
+        <a href="#" class="font120">Bookings</a>
+        <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+        <a href="./flight.html">Flights</a>
+        <a href="./homes.html">Holiday Homes</a>
+        <a href="./hotel.html">Hotels</a>
+        <a href="./restaurant.html">Restaurants</a>
+        <a href="./holidaypackages.html">Holiday Package</a>
+        <a href="./carhire.html">Car Hire</a>
+        <a href="./placestovisit.html">Places to Visit</a>
+        <a href="./cruise.html">Cruise</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./contact-us.html">Contact Us</a>
+    </div>
+    <div class="banner">
+        <div class="banner__backgroundColor">
+            <div class="categories__container">
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Flights</p>
+                    <i class="fa fa-plane"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Hotels</p>
+                    <i class="fa fa-bed"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Holiday Homes</p>
+                    <i class="fa fa-home"></i>
+                </div>
+
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Restaurants</p>
+                    <i class="fa fa-utensil-spoon"></i>
+                    
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Car Hire</p>
+                    <i class="fa fa-car"></i>
+                </div>
+                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+                    <p>More</p>
+                    <i class="fa fa-ellipsis-h"></i>
+                    
+ <!---------------------------------------Dropdown list from "More" Button-------------------------------------->
+                    <div id="moreButtonDropdown" class="dropdown-content">
+                        <a href="./holidaypackages.html">Holiday Package</a>
+                        <a href="./booking.html">Bookings</a>
+                        <a href="./cruise.html">Cruise</a>
+                        <a href="./placestovisit.html">Places to Visit</a>
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./contact-us.html">Contact Us</a>
+                        <a href="./faqs.html">FAQs</a>
+                        <a href="./reviews.html">Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+ <!--Main Content-->     
+ <h1 class="faq-heading">FAQs</h1>
+ <section class="faq-container">
+     <div class="faq-one">
+         <!-- faq question 1 -->
+         <h1 class="faq-page"> Why has Switzerland stopped issuing visas?</h1>
+         <!-- faq answer 1 -->
+         <div class="faq-body">
+             <p>The Federal Council decided at the onset of the pandemic in early 2020 that all non-essential travel had to be stopped to reduce the spread of the virus. Suspending the issuing of
+                 visas helped to achieve this goal. With the gradual lifting of restrictions on entry in line with the EU recommendations on individual third countries, Switzerland
+                  is also starting to issue visas again.</p>
+         </div>
+     </div>
+     <hr class="hr-line">
+     <div class="faq-two">
+         <!-- faq question 2-->
+         <h1 class="faq-page">Who has rights of free movement?</h1>
+         <!-- faq answer 2-->
+         <div class="faq-body">
+             <p> Foreign nationals without proof of a recognised vaccination (see question "How can I prove that I am vaccinated?") seeking to travel to Switzerland from a SEM high-risk country for a stay here of up to three months without a visa and who do not meet any of the requirements under "Who is permitted to enter Switzerland?"
+                  are not permitted to enter Switzerland. These persons include:</p>
+                  <ul>
+                     <li>Persons who wish to obtain services in Switzerland;</li>
+                     <li>Tourists, visitors and participants in events;</li>
+                     <li>Persons who wish to come to Switzerland for medical treatment that has not yet begun or that is not regarded as urgently required;</li>
+                     <li>Persons seeking employment or who have been invited for a job interview in Switzerland;</li>
+                     <li>Persons who wish to submit an application for a residence permit.</li>
+                  </ul>
+         </div>
+     </div>
+     <hr class="hr-line">
+     <div class="faq-three">
+         <!-- faq question 3-->
+     <h1 class="faq-page">How can I prove that I am vaccinated?</h1>
+         <!-- faq answer 3-->
+         <div class="faq-body">
+             <p>You will regarded as vaccinated if you have been vaccinated with a vaccine that:
+
+                 is authorised in Switzerland and has been administered in full in accordance with the FOPH recommendations;
+                 has been authorised by the European Medicines Agency for the European Union and has been administered in full in accordance with the requirements or recommendations of the country in which the vaccination was administered; or
+                 has been authorised under the WHO Emergency Use Listing and has been administered in full in accordance with the requirements or recommendations of the country in which the vaccination was administered.</p>
+         </div>
+     </div>
+     <hr class="hr-line">
+     <div class="faq-four">
+         <!-- faq question 4 -->
+     <h1 class="faq-page">What constitutes a case of special necessity?</h1>
+         <!-- faq answer 4 -->
+         <div class="faq-body">
+             <p>In cases of special necessity, it is possible to enter Switzerland from a country on the SEM high-risk list</p>
+         </div>
+     </div>
+     <hr class="hr-line">
+     <div class="faq-five">
+         <!-- faq question 5 -->
+     <h1 class="faq-page">Can people from third countries enter Switzerland in order to work?</h1>
+         <!-- faq answer 5 -->
+         <div class="faq-body">
+             <p>The cantonal authorities process applications for the admission of foreign workers from third countries. They will be approved provided they meet the requirements laid down in the Foreign Nationals and Integration Act. In the case
+                 of persons seeking to come to Switzerland to work for a maximum of four months, the cantonal authorities consider whether the person’s subsequent departure from the country is ensured.</p>      </div>
+     </div>
+     <hr class="hr-line">
+     <div class="faq-six">
+         <!-- faq question 6 -->
+     <h1 class="faq-page">How can I prove that I am vaccinated?</h1>
+         <!-- faq answer 6 -->
+         <div class="faq-body">
+             <p>You will regarded as vaccinated if you have been vaccinated with a vaccine that:</p>
+             <ol>
+                 <li>is authorised in Switzerland and has been administered in full in accordance with the FOPH recommendations;</li>
+                 <li>has been authorised by the European Medicines Agency for the European Union and has been administered in full in accordance with the requirements or recommendations of the country in which the vaccination was administered; or</li>
+                 <li>has been authorised under the WHO Emergency Use Listing and has been administered in full in accordance with the requirements or recommendations of the country in which the vaccination was administered</li>
+             </ol>
+             <hr>
+             
+         </div></div>
+     </div>
+ </section>
+
+
+ <!----------------------Footer----------------------->
+ <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+        as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+        vacation activities, and restaurants.
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li> Holiday Packages</li>
+          </a>
+          <a href="#">
+            <li>About Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Trust & Safety</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Terms & Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+          <a href="#">
+            <li> Terms Of Use</li>
+          </a>
+          <a href="#">
+            <li>Accessibility</li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; Excursive | Designed By Quintet
+    </div>
+  </div>
+
+ <!----------------------------------------Javascript for the page------------------------------------->
+  <script src="./js/faqs.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

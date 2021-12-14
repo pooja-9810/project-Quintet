@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cruises</title>
+    <link href="styles/crstyle.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <!-- START OF JOINT NAVIGATION BAR  -->
+  <body>
+    <header class="header">
+        <div class="header__left">
+            <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+            <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+                <i class="fa fa-pencil"></i>
+                <button class="hide">Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart"></i>
+                <button class="hide">Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell"></i>
+                <button class="hide">Alerts</button>
+            </div>
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button id="buttonSignIn">Sign Out</button>
+            </div>
+        </div>  
+    </header>
+
+
+    <div id="sidepanel" class="sidepanel">
+        <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+        <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+        <a href="#" class="font120">Alerts</a>
+        <a href="#" class="font120">Trips</a>
+        <a href="booking.html" class="font120">Bookings</a>
+        <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+        <a href="./flight.html">Flights</a>
+        <a href="#">Holiday Homes</a>
+        <a href="./hotel.html">Hotels</a>
+        <a href="./restaurant.html">Restaurants</a>
+        <a href="#">Holiday Package</a>
+        <a href="./carhire.html">Car Hire</a>
+        <a href="./placestovisit.html">Places to Visit</a>
+        <a href="./cruise.html">Cruise</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./contact-us.html">Contact Us</a>
+    </div>
+    <div class="banner">
+        <div class="banner__backgroundColor">
+            <div class="categories__container">
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Flights</p>
+                    <i class="fa fa-plane"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Hotels</p>
+                    <i class="fa fa-bed"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Holiday Homes</p>
+                    <i class="fa fa-home"></i>
+                </div>
+
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Restaurants</p>
+                    <i class="fa fa-utensil-spoon"></i>
+                    
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Car Hire</p>
+                    <i class="fa fa-car"></i>
+                </div>
+                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+                    <p>More</p>
+                    <i class="fa fa-ellipsis-h"></i>
+                    
+ <!---------------------------------------Dropdown list from "More" Button-------------------------------------->
+                    <div id="moreButtonDropdown" class="dropdown-content">
+                        <a href="#">Holiday Package</a>
+                        <a href="./booking.html">Bookings</a>
+                        <a href="./cruise.html">Cruise</a>
+                        <a href="./placestovisit.html">Places to Visit</a>
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./contact-us.html">Contact Us</a>
+                        <a href="./faqs.html">FAQs</a>
+                        <a href="./reviews.html">Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <!-- END OF JOINT NAVIGATION BAR  -->
+    <p class="create-space"></p>
+    <!-- START OF GRID CONTAINER FOR MAIN BANNER AND TEXTS -->
+    <section class="crheader">
+      <h1 class="crcountry">SWITZERLAND RIVER CRUISES</h1>
+      <img
+        class="crbackground"
+        src="images/cruisebg.jpg"
+        alt="A cruiseship in the sea"
+      />
+      <div class="crheadtext">
+        <div class="crheadtext cr--1">
+          <h2 class="crheadtext cr--1 cr--1a">ANNIVERSARY</h2>
+          <h2 class="crheadtext cr--1 cr--1b">SALE</h2>
+        </div>
+        <h3 class="crheadtext cr--2">$200 SEA CREDITS</h3>
+        <h3 class="crheadtext cr--3">+ ADDITIONAL $100 OFF AT CHECKOUT</h3>
+        <h3 class="crheadtext cr--4">EXTRA 10% OFF PER ADDITIONAL PASSENGER</h3>
+        <button class="crbook"><a href="#">Book now</a></button>
+      </div>
+      <div class="crheadfoot">
+        <span class="crTypewriter">The best cruise deals & special offers</span>
+        <ul>
+          <li>Enjoy our unique peace of mind concept with:</li>
+          <li>
+            <i class="fa fa-check alignerTool" aria-hidden="true"></i> Free Modifications
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i> Free Cancellations
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i> Unique Sea Credits
+            concept
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i> Future Cruise Credits
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i> Best Price Guarantee
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i> All Inclusive Health
+            Insurance
+          </li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Life Insurance</li>
+        </ul>
+      </div>
+    </section>
+    <!-- END OF GRID CONTAINER FOR MAIN BANNER AND TEXTS -->
+
+    <!-- FORM STARTS HERE -->
+    <section class="form-wrapper">
+      <form class="cruise-form" action="/action_page.php">
+        <div class="form-1">
+          <span class="form-1title">Select Extras:</span><br />
+          <input type="checkbox" name="extra1" value="full-meal" />Full Meal
+          Package<br />
+          <input
+            type="checkbox"
+            name="extra2"
+            value="alcoholic-beverages"
+          />Alcoholic Beverages Pass<br />
+          <input type="checkbox" name="extra3" value="vip-lounge" />VIP Lounge
+          Access <br><br>
+
+          <label for="select-ship-fld" class="select-ship-label">Select Your Ship: </label>
+          <select name="select-ship" class="select-ship-fld"></select> <br><br>
+
+          <label for="select-dest-fld" class="select-dest-label">Select Your Ship: </label>
+          <select name="select-dest" class="select-dest-fld"></select><br><br>
+
+          <input class="cruise-submit" type="submit" value="Submit">
+        </div>
+
+        <div class="form-2">
+          <div class="check-in">
+          <label for="bookingstart" class="booking-start-label">Check-in: </label>
+          <input
+            type="text"
+            name="bookingstart"
+            class="bookingstart"
+            placeholder="Select Date"
+            required
+            onfocus="(this.type='date')"
+            min="2021-12-01"
+          /></div>
+          
+          <div class="check-out">
+          <label for="bookingend" class="booking-end-label">Check-out: </label> 
+          <input
+            type="text"
+            name="bookingend"
+            class="bookingend"
+            placeholder="Select Date"
+            required
+            onfocus="(this.type='date')"
+            min="2021-12-01"
+          /></div>
+          
+          <div class="adult-count">
+          <label for="cruise-adult-count" class="adult-count-label">Adults: </label>
+          <input
+              type="number"
+              class="cruise-adult-count"
+              name="cruise-adult-count"
+              placeholder="Select Number"
+              required
+              pattern="\d{*}?"
+              title="Must be a number"
+            /></div>
+          <div class="children-count">
+          <label for="cruise-children-count" class="children-count-label">Children: </label>
+          <input
+              type="number"
+              class="cruise-children-count"
+              name="cruise-children-count"
+              placeholder="Select Number"
+              pattern="\d{*}?"
+              title="Must be a number"
+            /></div>
+          
+      </form>
+
+      <!-- FORM ENDS HERE -->
+
+      <!-- PRICE DISPLAY STARTS HERE -->
+      <div class="price-wrapper">
+        <p class="displayPrice1"></p>
+        <p class="displayPrice2"></p>
+        <p class="displayPrice3"></p>
+        <p class="displayPrice4"></p>
+        <p class="displayPrice5"></p>
+      </div>
+
+      <!-- PRICE DISPLAY ENDS HERE -->
+    </section>
+    <!-- START OF GRID CONTAINERS FOR CRUISE DESTINATIONS -->
+    <article>
+
+      <!-- DESTINATION 1 -->
+      <div class="cruisegrid1">
+        <img
+          class="cruisegridimg1"
+          src="images/cruisegridimg2.jpg"
+          alt="A boat with Swiss flag"
+        />
+        <div class="crarticle1">
+          <span>PARIS TO THE SWISS ALPS</span>
+          <p>Paris - Zurich</p>
+          <p>10 Days • 7 Guided Tours • 4 Countries</p>
+          <p>
+            Pay your respects at the Luxembourg American Cemetery. Discover
+            Roman Trier. Taste Moselle Rieslings and visit the wine town of
+            Bernkastel-Kues. Enjoy scenic cruising past the town of Sankt Goar,
+            home of the Lorelei Rock, and through the Rhine Gorge, a UNESCO
+            Site. Visit fascinating Worms and the university town of Heidelberg.
+            Vineyard-flanked slopes and historic cities, along with hotel stays
+            in Paris and Zürich, make this 12-day cruisetour irresistible.
+          </p>
+          <div class="crprice">
+            <p>FROM $3,198</p>
+            <button class="crbook crbook0 book--small"><a href="#">Book now</a></button>
+          </div>
+        </div>
+      </div>
+      <!-- DESTINATION 2  -->
+      <div class="cruisegrid2">
+        <img
+          class="cruisegridimg1"
+          src="images/cruisegridimg1.jpg"
+          alt="A peaceful blue river"
+        />
+        <div class="crarticle2">
+          <span>RHINE & VIKING SHORES & FJORDS</span>
+          <p>Basel – Bergen or Bergen – Basel</p>
+          <p>20 Days • 16 Guided Tours • 8 Countries</p>
+          <p>
+            Explore cultural, scenic and historic treasures from Bergen to
+            Basel. Sail among the pristine fjords of Norway, calling on vibrant
+            cultural capitals. Follow the legendary Rhine into the heart of
+            Europe, where riverside castles have witnessed a dramatic past.
+          </p>
+          <div class="crprice">
+            <p>FROM $8,198</p>
+            <button class="crbook crbook1 book--small"><a href="#">Book now</a></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESTINATION 3 -->
+      <div class="cruisegrid3">
+        <img
+          class="cruisegridimg1"
+          src="images/cruisegridimg3.jpg"
+          alt="A boat with Swiss flag"
+        />
+        <div class="crarticle3">
+          <span>RHINE GATEWAY</span>
+          <p>Amsterdam - Basel</p>
+          <p>9 Days • 5 Guided Tours • 4 Countries</p>
+          <p>
+            Explore one of Europe’s best-loved rivers, the Rhine. Discover the
+            turreted fortresses, grand cathedrals, historic cities, medieval
+            towns and spectacular scenery of the Middle Rhine—a UNESCO World
+            Heritage Site. Taste the region’s renowned white wines, the roots of
+            its terraced vineyards reaching back to Roman times. Savor the
+            various culinary traditions of Alsace. From Amsterdam and Cologne to
+            Basel, this journey reveals a rich landscape of beauty and culture.
+          </p>
+          <div class="crprice">
+            <p>FROM $2,498</p>
+            <button class="crbook crbook2 book--small"><a href="#">Book now</a></button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <script src="js/cruise.js"></script>
+  </body>
+  <!-- END OF GRID CONTAINERS FOR THE CRUISE DESTINATIONS  -->
+ 
+
+
+  <!-- ----------------------FOOTER---------------------------------------- -->
+  <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+        as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+        vacation activities, and restaurants.
+        <div class="socials">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href="faqs.html">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li> Holiday Packages</li>
+          </a>
+          <a href="aboutus.html">
+            <li>About Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Trust & Safety</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Terms & Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+          <a href="#">
+            <li> Terms Of Use</li>
+          </a>
+          <a href="#">
+            <li>Accessibility</li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; Excursive | Designed By Quintet
+    </div>
+  </div>
+
+</html>
+
+

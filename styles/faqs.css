@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+
+.header {
+  display: flex;
+  background-color: rgb(80 170 174);
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  height: 3.5rem;
+  z-index: 1000;
+}
+#hamburger {
+  font-size: 220%;
+  cursor: pointer;
+  display: none;
+}
+#hamburger:hover {
+  cursor: pointer;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.header__right {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.header__right button {
+  border: none;
+  background: none;
+}
+#signin {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburgerSignIn {
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  padding: 0.5rem 2rem;
+  margin-left: 2rem;
+}
+
+.header__rightBtn {
+  padding: 10px;
+}
+
+.header__rightBtn button {
+  cursor: pointer;
+  color: white;
+  font-size: medium;
+}
+
+.header__rightBtn:hover {
+  cursor: pointer;
+  background-color: rgb(122, 136, 146);
+  border-radius: 15px;
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1001;
+}
+
+.sidepanel a {
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  text-decoration: none;
+  color: black;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.font120 {
+  font-size: 120% !important;
+  font-weight: bold;
+}
+#hamburgerClosebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 150% !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+main {
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  background: rgb(60, 60, 60);
+  margin-top: auto;
+  width: 100%;
+}
+.banner {
+  width: 100vw;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+background-image: url("https://stockphoto.com/search.php?q=kids+playing+outdoors");
+  position: relative;
+}
+.banner::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*CSS for FAQ*/
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 1000px;
+}
+.hr-line{
+  width: 85%;
+  margin: auto;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 80%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+   width: 80%; 
+   padding: auto;
+   
+}
+
+/* If the button is clicked (add the.active class using JS), give it a background colour, and as you drag the mouse over it, give it a colour (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+
+
+
+
+
+
+.categories__container {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 3rem;
+  width: 86%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+  margin: 1rem 0.5rem;
+  padding: 0 1rem;
+}
+
+.category i {
+  font-size: 1.4rem;
+}
+
+.category:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+.category a {
+  text-decoration: none;
+}
+
+.position {
+  position: absolute;
+  top: 50%;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: white;
+}
+
+.marginTopBottom1rem {
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 800px) {
+
+.faq-heading{
+    margin-top:100px;
+}
+.faq-page {
+    /* background-color: #eee; */
+   
+    width: 60%;
+    
+}
+.faq-body{
+    margin: auto;
+   width: 60%; 
+   padding: auto;
+   
+}
+
+}
+@media screen and (max-width: 275px) {
+  .app__title {
+    display: none;
+  }
+  .faq-heading{
+    margin-top:100px;
+}
+
+}
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+  .faq-heading{
+    margin-top:800px;
+}
+
+
+  .header__rightBtn {
+    display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+  .categories__container {
+    display: none;
+  }
+  .faq-page {
+    /* background-color: #eee; */
+   
+    width: 40%;
+    
+}
+.faq-body{
+    margin: auto;
+   width: 40%; 
+   padding: auto; 
+}
+}
+
+#moreButtonDropdown{
+  z-index:2;
+}
+
+@media screen and (max-width: 1020px) {
+  .header__rightBtn .hide {
+    display: none;
+  }
+  .html{
+    width:100%;
+}
+}
+
+
+ /* Footer */
+ .footer .footer-content .fa-brands {  
+  padding: 0px;  
+  text-align: center;  
+  margin: 5px 2px;  
+  font-size: 20px;  
+  width: 50px;  
+  color: white;
+  
+}  
+
+.footer {
+background: rgb(63, 60, 60);
+color: #bebdbd;
+height:400px;
+position: relative;
+width:100%
+}
+.footer .footer-content {
+height: 350px;
+display: flex;
+}
+.footer .footer-content .footer-section {
+flex: 1;
+padding: 25px;
+}
+
+.footer .footer-content h2 {
+color: #bebdbd;
+}
+.footer .footer-content .about h1 span{
+color: rgb(19,129,141);
+} 
+.footer .footer-content .contact span{
+display: block;
+font-size: 1.1em;
+margin-bottom: 8px;
+} 
+
+
+.footer .footer-content .about .socials a{
+
+width: 45px;
+height: 40px;
+text-align: center;
+display: inline-block;
+font-size: 5px;
+border-radius: 5px;
+transition: all .3s;
+
+}
+.footer .footer-content .links ul a{
+display: block;
+margin-bottom: 10px;
+font-size: 20px;
+color: #bebdbd;
+text-decoration: none;
+
+}
+.footer .footer-content .links ul a:hover{
+color:rgb(243, 233, 233);
+margin-left: 15px;
+transition: all .3s;
+}
+
+
+.footer .footer-content .about .socials a:hover {
+border :1px solid white;
+color: white;
+transition: all .3s;
+}
+.footer .footer-content .contact-form  ul a{
+display: block;
+margin-bottom: 10px;
+font-size: 20px;
+color: #bebdbd;
+text-decoration: none;
+}
+.footer .footer-content .contact-form ul a:hover{
+color:rgb(243, 233, 233);
+margin-left: 15px;
+transition: all .3s;
+}
+.footer .footer-content .contact-form .contact-btn{
+float: right;
+}
+.footer .footer-bottom{
+  background: rgb(44, 43, 42);
+  color:#574c4c;
+  height: 50px;
+  width:100%;  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  padding-top:20px;
+}
+
+
+@media screen and (max-width: 275px) {
+  .app__title {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+  .header__rightBtn {
+    display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+  .categories__container {
+    display: none;
+  }
+  .faq-heading{
+    margin-top:200px;
+}
+
+}
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+  .header__rightBtn {
+    display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+  .categories__container {
+    display: none;
+  }}
+  @media screen and (max-width: 920px) {
+    /* Removing right button text as screen size decrease */
+    .header__rightBtn .hide {
+      display: none;
+    }
+    .faq-heading{
+        margin-top:200px;
+    }
+    }
+  @media screen and  (max-width: 768px){
+    .header__right{
+      position: absolute;
+      top:70px;
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      flex-wrap: wrap;
+    }
+    
+   
+    .categories__container {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      flex-wrap: wrap;
+      width:500px
+  }
+  header{
+    font-size: 20px;
+    padding-bottom: 150px;
+  }
+
+ 
+  .footer {
+    height:auto;
+    position: relative;
+    width:100%
+  }
+  .footer .footer-content {
+    height: auto;
+    flex-direction: column;
+  }
+  .footer .footer-content .contact-form{
+    padding-bottom: 90px;
+  }
+  .footer .footer-content .contact-form .contact-btn{
+    width: 100%;
+  }
+}
+  

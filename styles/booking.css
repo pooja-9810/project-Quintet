@@ -1,0 +1,921 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+Main Color: #50AAAE
+Grey Color: #1f2937
+Accent Color: #f59e0b
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(80 170 174);
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  height: 3.5rem;
+  z-index: 1000;
+}
+#hamburger {
+  font-size: 220%;
+  cursor: pointer;
+  display: none;
+}
+#hamburger:hover {
+  cursor: pointer;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.header__right {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.header__right button {
+  border: none;
+  background: none;
+}
+#signin {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburgerSignIn {
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  padding: 0.5rem 2rem;
+  margin-left: 2rem;
+}
+
+.header__rightBtn {
+  padding: 10px;
+}
+
+.header__rightBtn button {
+  cursor: pointer;
+  color: white;
+  font-size: medium;
+}
+
+.header__rightBtn:hover {
+  cursor: pointer;
+  background-color: rgb(122, 136, 146);
+  border-radius: 15px;
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1001;
+}
+
+.sidepanel a {
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  text-decoration: none;
+  color: black;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.font120 {
+  font-size: 120% !important;
+  font-weight: bold;
+}
+#hamburgerClosebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 150% !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+main {
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  background: rgb(60, 60, 60);
+  margin-top: auto;
+  width: 100%;
+}
+.banner {
+  width: 100vw;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url("https://stockphoto.com/search.php?q=kids+playing+outdoors");
+  position: relative;
+}
+.banner::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Main */
+main {
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* Nav bar */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.categories__container {
+  display: flex;
+  justify-content: center;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;
+  margin: 1rem 0.5rem;
+  padding: 0 1rem;
+}
+
+.category i {
+  font-size: 1.4rem;
+}
+
+.category:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+/* BOOKING PAGE STYLE STARTS HERE  */
+
+.bookingheader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(10, 50px);
+}
+
+/* BOOKING- container for top banner */
+.booking-header-background {
+  object-fit: cover;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: -1;
+  filter: brightness(60%);
+  justify-self: center;
+  align-self: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+/* BOOKING h1 text in banner */
+.bookingtitle {
+  justify-self: center;
+  z-index: 1;
+  grid-column: 2 / 6;
+  grid-row: 4 / 4;
+  color: whitesmoke;
+}
+
+/* BOOKING - banner style ends here */
+
+/* BOOKING - main body part containing everything starts here*/
+
+.booking-layout-grid {
+  width: auto;
+  display: flex;
+  flex: 1 1 10%;
+  margin-top: 4vw;
+  margin-left: 3vw;
+}
+
+/* embedded google maps window on the left*/
+.google-map {
+  justify-self: center;
+  width: 15vw;
+  height: 15vw;
+}
+
+/* checknboxes for filtering past bookings */
+.filter-bookings {
+  margin-top: 2vw;
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+
+/* container for each past booking window */
+.booking-grid-1 {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 15%);
+  direction: ltr;
+  gap: 4vw;
+  margin: 4vw;
+  padding: 2vw;
+  border-radius: 30px;
+  border: ridge;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0vw;
+}
+
+/* MAIN TEXT CONTAINER FOR EACH PAST BOOKING */
+.booking-hotel {
+  display: grid;
+  grid-column: 3/6;
+  line-height: 1.5vw;
+}
+/* HOTEL BOOKING IMAGE */
+.booking-hotel-img {
+  width: 100%;
+  grid-column: 1/3;
+  object-fit: cover;
+  z-index: -1;
+}
+/* FLIGHT BOOKING IMAGE */
+.booking-plane-img {
+  height: 17vw;
+  width: 25vw;
+  grid-column: 1/3;
+  object-fit: cover;
+  object-position: 0 0;
+  margin-right: 12vw;
+}
+/* RESTAURANT BOOKING IMAGE */
+.booking-restaurant-img {
+  height: 17vw;
+  width: 25vw;
+  grid-column: 1/3;
+  object-fit: cover;
+  object-position: 100 0;
+}
+/* HOLIDAY PACKAGE EMPTY CONTAINER */
+.holiday-package {
+  display: grid;
+  grid-column: 3/6;
+  line-height: 1.5vw;
+}
+/* HOLIDAY PACKAGE IMAGE STYLE */
+.booking-holiday-package-img {
+  height: 17vw;
+  width: 25vw;
+  grid-column: 1/3;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+/* STYLE FOR EMPTY CONTAINER */
+.booking-empty-title {
+  font-size: 3vw;
+  color: #bebdbd;
+}
+
+/* CANCELLED BOOKING STYLE */
+.cancelled-message {
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  color: #444;
+}
+/* RIGHT SIDE DETAILS CONTAINER FOR EACH DESTINATION */
+.booking-hotel-right {
+  grid-column: 5/6;
+  text-align: right;
+  align-self: flex-end;
+  line-height: 0.1vw;
+  margin-left: 1rem;
+}
+/* BOOKING TIME STYLE */
+.booking-time {
+  color: #0b740b;
+  font-size: 1vw;
+}
+
+/* BOOK AGAIN BUTTON */
+.book-again {
+  color: white;
+  padding: 0.4rem;
+  background-color: #ffa200;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.book-again:hover {
+  background-color: #f58a10;
+}
+
+.book-again:active {
+  background-color: rgb(128, 9, 0);
+}
+
+.book-again:link,
+.book-again:link {
+  color: #310808;
+}
+
+.booking-hotel-title {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.booking-hotel-loc {
+  color: gray;
+  font-size: 0.8rem;
+  margin-top: -1.5vw;
+}
+
+.booking-hotel-desc {
+  font-size: 1.2vw;
+}
+
+.booking-hotel-feats {
+  line-height: 0.5vw;
+  color: #216669;
+  font-size: 0.8vw;
+}
+
+.booking-current-price {
+  font-size: 1.5vw;
+  font-weight: 900;
+}
+
+.booking-hotel-pernight {
+  font-size: 0.8vw;
+}
+
+.booking-hotel-img {
+  -webkit-filter: brightness(100%);
+}
+
+.booking-hotel-img:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Footer */
+.footer .footer-content .fa {
+  padding: 0px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 20px;
+  width: 50px;
+  color: white;
+}
+
+.footer {
+  background: rgb(63, 60, 60);
+  color: #bebdbd;
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+.footer .footer-content {
+  height: 350px;
+  display: flex;
+}
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer .footer-content h2 {
+  color: #bebdbd;
+}
+.footer .footer-content .about h1 span {
+  color: rgb(19, 129, 141);
+}
+.footer .footer-content .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+  font-size: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.footer .footer-content .links ul a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #bebdbd;
+  text-decoration: none;
+}
+.footer .footer-content .links ul a:hover {
+  color: rgb(243, 233, 233);
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s;
+}
+.footer .footer-content .contact-form ul a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #bebdbd;
+  text-decoration: none;
+}
+.footer .footer-content .contact-form ul a:hover {
+  color: rgb(243, 233, 233);
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+.footer .footer-content .contact-form .contact-btn {
+  float: right;
+}
+.btn-big {
+  padding: 10px 10px;
+  line-height: 30px;
+  background-color: rgb(19, 129, 141);
+  color: white;
+  border-radius: 3px;
+  font-size: 20px;
+}
+.text-input {
+  padding: 10px 10px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+}
+.footer .footer-bottom {
+  background: rgb(44, 43, 42);
+  color: #574c4c;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 658px) {
+  body {
+    min-width: auto;
+  }
+
+  .booking-layout-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .booking-grid-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+  }
+
+  .booking-time,
+  .booking-hotel-title,
+  .booking-hotel-loc,
+  .booking-hotel-desc,
+  .cancelled-message,
+  .booking-current-price,
+  .booking-layout-grid,
+  .booking-hotel-pernight,
+  .booking-hotel-feats {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .booking-restaurant-img,
+  .booking-plane-img,
+  .booking-restaurant-img,
+  .booking-holiday-package-img,
+  .booking-hotel-img {
+    width: 100%;
+    grid-column: 1/3;
+    object-fit: cover;
+
+    height: 50vw;
+    width: 80vw;
+    grid-column: 1/3;
+    object-fit: cover;
+    margin-right: 0px;
+    border-radius: 20px;
+  }
+  .left-container {
+    display: flex;
+    flex: 1 1 100;
+    gap: 10vw;
+    justify-content: space-evenly;
+  }
+
+  .google-map {
+    justify-self: center;
+    width: 35vw;
+    height: 35vw;
+    align-self: center;
+  }
+}
+/* FOR FILTERING PURPOSES ADD AND REMOVE TO CLASSLIST */
+.hidden {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.carousel-img {
+  object-fit: cover;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: -1;
+  filter: brightness(60%);
+  justify-self: center;
+  align-self: flex-start;
+  height: 400px;
+  width: 100%;
+}
+
+.carousel-img2 {
+  object-fit: cover;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: -1;
+  filter: brightness(60%);
+  justify-self: center;
+  align-self: flex-start;
+  height: 400px;
+  width: 100%;
+  object-position: 0 -800px;
+}
+
+.carousel-img3 {
+  object-fit: cover;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: -1;
+  filter: brightness(60%);
+  justify-self: center;
+  align-self: flex-start;
+  height: 400px;
+  width: 100%;
+  object-position: 0 -1100px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+  .faq-heading {
+    margin-top: 800px;
+  }
+
+  .header__rightBtn {
+    display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+  .categories__container {
+    display: none;
+  }
+  .faq-page {
+    /* background-color: #eee; */
+
+    width: 40%;
+  }
+  .faq-body {
+    margin: auto;
+    width: 40%;
+    padding: auto;
+  }
+}
+
+#moreButtonDropdown {
+  z-index: 2;
+}
+
+@media screen and (max-width: 1020px) {
+  .header__rightBtn .hide {
+    display: none;
+  }
+  .html {
+    width: 100%;
+  }
+  .categories__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .create-space {
+    height: 170px;
+  }
+
+  .carousel-img2 {
+    object-position: 0 0;
+  }
+
+  .carousel-img3 {
+    object-position: 0 0;
+  }
+
+  /* Footer */
+  .footer .footer-content .fa {
+    padding: 0px;
+    text-align: center;
+    margin: 5px 2px;
+    font-size: 20px;
+    width: 50px;
+    color: white;
+  }
+
+  .footer {
+    background: rgb(63, 60, 60);
+    color: #bebdbd;
+    height: 400px;
+    position: relative;
+    width: 100%;
+  }
+  .footer .footer-content {
+    height: 350px;
+    display: flex;
+  }
+  .footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+  }
+
+  .footer .footer-content h2 {
+    color: #bebdbd;
+  }
+  .footer .footer-content .about h1 span {
+    color: rgb(19, 129, 141);
+  }
+  .footer .footer-content .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .footer .footer-content .about .socials a {
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    font-size: 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  .footer .footer-content .links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #bebdbd;
+    text-decoration: none;
+  }
+  .footer .footer-content .links ul a:hover {
+    color: rgb(243, 233, 233);
+    margin-left: 15px;
+    transition: all 0.3s;
+  }
+
+  .footer .footer-content .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all 0.3s;
+  }
+  .footer .footer-content .contact-form ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #bebdbd;
+    text-decoration: none;
+  }
+  .footer .footer-content .contact-form ul a:hover {
+    color: rgb(243, 233, 233);
+    margin-left: 15px;
+    transition: all 0.3s;
+  }
+  .footer .footer-content .contact-form .contact-btn {
+    float: right;
+  }
+  .footer .footer-bottom {
+    background: rgb(44, 43, 42);
+    color: #574c4c;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    padding-top: 20px;
+  }
+}

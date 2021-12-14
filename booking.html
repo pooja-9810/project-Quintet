@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Booking</title>
+    <link href="styles/booking.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <!-- START OF JOINT NAVIGATION BAR  -->
+  <body>
+    <header class="header">
+        <div class="header__left">
+            <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+            <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+                <i class="fa fa-pencil"></i>
+                <button class="hide">Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart"></i>
+                <button class="hide">Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell"></i>
+                <button class="hide">Alerts</button>
+            </div>
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button id="buttonSignIn">Sign Out</button>
+            </div>
+        </div>  
+    </header>
+
+
+    <div id="sidepanel" class="sidepanel">
+        <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+        <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+        <a href="#" class="font120">Alerts</a>
+        <a href="#" class="font120">Trips</a>
+        <a href="booking.html" class="font120">Bookings</a>
+        <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+        <a href="./flight.html">Flights</a>
+        <a href="#">Holiday Homes</a>
+        <a href="./hotel.html">Hotels</a>
+        <a href="./restaurant.html">Restaurants</a>
+        <a href="#">Holiday Package</a>
+        <a href="./carhire.html">Car Hire</a>
+        <a href="./placestovisit.html">Places to Visit</a>
+        <a href="./cruise.html">Cruise</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./contact-us.html">Contact Us</a>
+    </div>
+    <div class="banner">
+        <div class="banner__backgroundColor">
+            <div class="categories__container">
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Flights</p>
+                    <i class="fa fa-plane"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Hotels</p>
+                    <i class="fa fa-bed"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Holiday Homes</p>
+                    <i class="fa fa-home"></i>
+                </div>
+
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Restaurants</p>
+                    <i class="fa fa-utensil-spoon"></i>
+                    
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Car Hire</p>
+                    <i class="fa fa-car"></i>
+                </div>
+                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+                    <p>More</p>
+                    <i class="fa fa-ellipsis-h"></i>
+                    
+ <!---------------------------------------Dropdown list from "More" Button-------------------------------------->
+                    <div id="moreButtonDropdown" class="dropdown-content">
+                        <a href="#">Holiday Package</a>
+                        <a href="booking.html">Bookings</a>
+                        <a href="./cruise.html">Cruise</a>
+                        <a href="./placestovisit.html">Places to Visit</a>
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="./contact-us.html">Contact Us</a>
+                        <a href="./faqs.html">FAQs</a>
+                        <a href="./reviews.html">Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!-- END OF JOINT NAVIGATION BAR  -->
+
+    <!-- END OF GRID CONTAINER FOR MAIN BANNER AND TEXTS -->
+
+
+    <!-- Page Header -->
+    <!-- <div class="bookingheader"> -->
+      <!-- Header Text -->
+      <!-- <h1 class="bookingtitle">The memories we have gathered over the years...</h1> -->
+      
+      <!-- Header Background -->
+      
+      <!-- <img
+        class="booking-header-background"
+        src="images/booking/bookingheader.jpg"
+        alt="Swiss meadows and alps"
+      /> -->
+
+      <!-- Slideshow container -->
+      <p class="create-space"></p>
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img class="carousel-img" src="images/booking/bookingheader1.jpg"/>
+          <div class="text">All the memories we have made over the years</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img class="carousel-img2" src="images/booking/bookingheader2.jpg"/>
+          <div class="text">Memories bring us together again</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img class="carousel-img3" src="images/booking/bookingheader3.jpg"/>
+          <div class="text">Are you ready for the next adventure with us?</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    <!-- </div> -->
+    <!-- LEFT CONTAINER FOR CHECKBOXES AND MAP -->
+    <div class="booking-layout-grid">
+      <div class="left-container">
+        <!-- EMBEDDED MAP -->
+        <iframe
+          class="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d349148.19077342964!2d7.945767321875644!3d46.868877633981775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sswitzerland%20hotels!5e0!3m2!1sen!2str!4v1636461729357!5m2!1sen!2str"
+          width="350"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <!-- FILTER CHECKBOXES -->
+        <div class="filter-bookings">
+          <span class="form-1title">Filter Past Bookings By: </span><br />
+          <input type="checkbox" name="checkbox" value="hotel"/>Hotel<br />
+          <input type="checkbox" name="checkbox" value="cruise" />Cruise<br />
+          <input type="checkbox" name="checkbox" value="car" />Car Rental<br />
+          <input type="checkbox" name="checkbox" value="flight" />Flight<br />
+          <input type="checkbox" name="checkbox" value="holiday" />Holiday Package<br />
+          <input type="checkbox" name="checkbox" value="restaurants" />Restaurants<br />
+          <input type="checkbox" name="checkbox" value="cancelled" />Cancelled<br />
+        </div>
+      </div>
+      <!-- RIGHT SIDE CONTAINER FOR PAST BOOKINGS -->
+      <article>
+        <!-- FIRST HOTEL CONTAINER -->
+        <div class="booking-grid-1 hotel hotel-1">
+          <img
+            class="booking-hotel-img"
+            src="images/booking/Walensee, Switzerland unsplash.jpg"
+            alt="A bed in Swiss Alps"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">23 Dec 2020 - 03 Jan 2021</p>
+              <p class="booking-hotel-title">Walensee Hotel</p>
+              <p class="booking-hotel-loc">Canton of St. Gallen</p>
+              <p class="booking-hotel-desc">
+                The Walensee Hotel is a modern, elegant 4-star hotel overlooking
+                the lake, perfect for a romantic, charming vacation, in the
+                enchanting setting of Alps.
+              </p>
+              <div class="booking-hotel-feats">
+                <p class=>Fully refundable</p>
+                <p class=>Reserve now, pay later</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="hotel.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $235</p>
+              <p class="booking-hotel-pernight">per night</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- SECOND HOTEL CONTAINER -->
+        <div class="booking-grid-1 hotel hotel-2">
+          <img
+            class="booking-hotel-img"
+            src="images/booking/hotel-swiss.jpg"
+            alt="A luxurious hotel room in pastel colors"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">07 May 2017 - 12 Jun 2017</p>
+              <p class="booking-hotel-title">Swiss Hotel</p>
+              <p class="booking-hotel-loc">Zurich</p>
+              <p class="booking-hotel-desc">
+                A warm Tuscan style two-story room with a king size bed and outdoor balcony on the lower level, and a queen size bed in the upper floor loft. This room also contains a shower/tub combination with a granite vanity in the restroom.
+              </p>
+              <div class="booking-hotel-feats">
+                <p class=>Fully refundable</p>
+                <p class=>Breakfast included</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="hotel.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $170</p>
+              <p class="booking-hotel-pernight">per night</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- THIRD HOTEL CONTAINER -->
+        <div class="booking-grid-1 hotel hotel-3">
+          <img
+            class="booking-hotel-img"
+            src="images/booking/thealpsresort.jpg"
+            alt="A hotel room with fully panaromic view of alps"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">09 Jul 2013 - 17 Jul 2013</p>
+              <p class="booking-hotel-title">The Alps Resort</p>
+              <p class="booking-hotel-loc">Veysonnaz</p>
+              <p class="booking-hotel-desc">A charming suite preserving the heritage in the historic inn building that offers a distinct charm with a private patio, king canopy bed, soaking tub, separate tiled shower, tucked away dining room with a mirror dressing table, and s refrigerator. The Suite is located above our Town Restaurant in our original historic inn.</p>
+              <div class="booking-hotel-feats">
+                <p class=>Fully refundable</p>
+                <p class=>Reserve now, pay later</p>
+                <p class=>All inclusive</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="hotel.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $465</p>
+              <p class="booking-hotel-pernight">per night</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- FIRST FLIGHT CONTAINER -->
+        <div class="booking-grid-1 flight flight-1">
+          <img
+            class="booking-plane-img"
+            src="images/booking/plane-travel.jpeg"
+            alt="An airborne plane wing against a cloudy background"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">07 May 2017 - 12 Jun 2017 (Round-trip)</p>
+              <p class="booking-hotel-title">Toronto - Zurich</p>
+              <p class="booking-hotel-loc">Air Canada</p>
+              <p class="booking-hotel-desc"></p>
+              <div class="booking-hotel-feats">
+                <p class=>Partially refundable</p>
+                <p class=>Reserve now, pay later</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="flight.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $879</p>
+              <p class="booking-hotel-pernight">per person</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- SECOND FLIGHT CONTAINER -->
+        <div class="booking-grid-1 flight flight-1">
+          <img
+             class="booking-plane-img"
+            src="images/booking/plane-travel.jpeg"
+            alt="An airborne plane wing against a cloudy background"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">17 Jul 2013 (One-way)</p>
+              <p class="booking-hotel-title">Veysonnaz - Paris </p>
+              <p class="booking-hotel-loc">Bern</p>
+              <p class="booking-hotel-desc"></p>
+              <div class="booking-hotel-feats">
+                <p class=>Fully refundable</p>
+                <p class=>Reserve now, pay later</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="flight.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $165</p>
+              <p class="booking-hotel-pernight">per person</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- FIRST CRUISE CONTAINER -->
+        <div class="booking-grid-1 cruise cruise-1">
+          <img
+            class="booking-hotel-img"
+            src="images/cruisegridimg3.jpg"
+            alt="A boat with Swiss flag"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">03 June 2016 - 12 June 2016 (White Pearl)</p>
+              <p class="booking-hotel-title">Rhine Gateway Cruise</p>
+              <p class="booking-hotel-loc">Amsterdam - Basel</p>
+              <p class="booking-hotel-desc">Explore one of Europe’s best-loved rivers, the Rhine. Discover the turreted fortresses, 
+                grand cathedrals, historic cities, medieval towns and spectacular scenery of the Middle Rhine—a UNESCO World Heritage Site. 
+                Taste the region’s renowned white wines, the roots of its terraced vineyards reaching back to Roman times. Savor 
+                the various culinary traditions of Alsace. From Amsterdam and Cologne to Basel, this journey reveals a rich landscape 
+                of beauty and culture.</p>
+              <div class="booking-hotel-feats">
+                <p class=>Reserve now, pay later</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="cruise.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $2498</p>
+              <p class="booking-hotel-pernight">per person</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- FIRST CAR RENTAL CONTAINER -->
+        <div class="booking-grid-1 car-rental cruise-1">
+          <img
+            class="booking-hotel-img"
+            src="images/booking/chevrolet-camarro.jpeg"
+            alt="A black chevrolet camarro"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">10 May 2017 - 02 Jun 2017</p>
+              <p class="booking-hotel-title">Chevrolet Camarro</p>
+              <p class="booking-hotel-loc">Zurich Airport- Hertz </p>
+              <p class="booking-hotel-desc">1976 Chevrolet Camarro 4 Speed comes at 153000kms. A true classic. </p>
+              <div class="booking-hotel-feats">
+                <p class=booking-hotel-feats>Reserve now, pay later</p>
+                <p class=booking-hotel-feats>May be discontinued. Please get in touch with the service provider.</p>
+              </div>
+            </div>
+            
+            <div class="booking-hotel-right">
+              <a href="carhire.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $120</p>
+              <p class="booking-hotel-pernight">per day</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- FIRST HOLIDAY PACKAGE CONTAINER / EMPTY -->
+        <div class="booking-grid-1 holiday-package cruise-1">
+          <img
+            class="booking-holiday-package-img"
+            src="images/booking/nothing-to-show.jpeg"
+            alt="A hat and luggage"
+          />
+          <div class="booking-hotel">
+              <p class="booking-empty-title">NOTHING TO SHOW HERE....</p>
+              <a href="holidaypackage.html"><button class="book-again">BOOK NOW</button></a>
+
+          </div>
+        </div>
+        <!-- FIRST RESTAURANT CONTAINER -->
+        <div class="booking-grid-1 restaurant cruise-1">
+          <img
+            class="booking-restaurant-img"
+            src="images/booking/swiss-restaurant.jpeg"
+            alt="A black chevrolet camarro"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">19 Jul 2013</p>
+              <p class="booking-hotel-title">Chalet La Maya</p>
+              <p class="booking-hotel-loc">Veysonnaz </p>
+              <p class="booking-hotel-desc">Just a few metres from the Trabanta ski lift, the Chalet La Maya restaurant offers traditional
+                 and refined cuisine for kids and adults alike. The establishment is divided into a bistro area, a restaurant area and a 
+                 space for children. </p>
+              <div class="booking-hotel-feats">
+                <p class=>Reserve now, pay later</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <a href="restaurant.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $200</p>
+              <p class="booking-hotel-pernight">DINNER SPECIAL PER PERSON</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+        <!-- FIRST CANCELLED CONTAINER -->
+        <div class="booking-grid-1 cancelled cruise-1">
+          <img
+            class="booking-restaurant-img"
+            src="images/cruisegridimg1.jpg"
+            alt="A black chevrolet camarro"
+          />
+          <div class="booking-hotel">
+            <div class="booking-hotel-center">
+              <p class="booking-time">29 Apr 2015 - Cancelled</p>
+              <p class="booking-hotel-title">CRHINE & VIKING SHORES</p>
+              <p class="booking-hotel-loc">Basel – Bergen or Bergen – Basel</p>
+              <p class="booking-hotel-desc">Explore cultural, scenic and historic treasures from Bergen to
+                Basel. Sail among the pristine fjords of Norway, calling on vibrant
+                cultural capitals. Follow the legendary Rhine into the heart of
+                Europe, where riverside castles have witnessed a dramatic past. </p>
+              <div class="booking-hotel-feats">
+                <p class=>Reserve now, pay later</p>
+              </div>
+            </div>
+            <div class="booking-hotel-right">
+              <p class="cancelled-message">Changed your mind?</p>
+              <a href="cruise.html"><button class="book-again">Book Again For</button></a>
+              <p class="booking-current-price">CA $8,198</p>
+              <p class="booking-hotel-pernight">per person</p>
+              <p class="booking-hotel-pernight">Includes taxes & fees</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- JAVASCRIPT FILE HERE -->
+    <script src="js/booking.js"></script>
+  </body>
+  <!-- END OF GRID CONTAINERS FOR THE CRUISE DESTINATIONS  -->
+
+
+
+  <!-- ----------------------FOOTER---------------------------------------- -->
+  <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Excursive</span></h1>
+        <p></p>
+
+        <div class="contact">
+          <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+          <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+        as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+        vacation activities, and restaurants.
+        <div class="socials">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href="faqs.html">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li> Holiday Packages</li>
+          </a>
+          <a href="aboutus.html">
+            <li>About Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Trust & Safety</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Terms & Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+          <a href="#">
+            <li> Terms Of Use</li>
+          </a>
+          <a href="#">
+            <li>Accessibility</li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; Excursive | Designed By Quintet
+    </div>
+  </div>
+
+</html>
+
+
